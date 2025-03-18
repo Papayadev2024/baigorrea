@@ -8,8 +8,8 @@
                     <a href="{{ url('/') }}">
                         <img
                             src="{{ asset('images/svg/logoadrianafinal.svg') }}"
-                            alt="Telecable"
-                            class="max-w-80"
+                            alt="Adriana Pezo"
+                            class="max-w-80 w-full"
                         />
                     </a>
                 </div>
