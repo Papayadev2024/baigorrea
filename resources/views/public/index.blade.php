@@ -90,7 +90,7 @@
         
        
         <section>
-            <div class="flex flex-col gap-10 w-full px-[5%] pt-10 md:pt-20 bg-white">
+            <div class="flex flex-col gap-10 w-full px-[5%] pt-10 md:pt-20 bg-white overflow-hidden">
                 
                 <div class="grid grid-cols-2 lg:grid-cols-5 gap-5 lg:gap-0">
                     <div class="col-span-2 flex flex-col justify-between pb-0 lg:pb-10">
@@ -118,7 +118,7 @@
                         </div>
                     </div>
     
-                    <div class="col-span-2 flex flex-col justify-end items-center relative order-2 lg:order-1">
+                    <div class="col-span-2 flex flex-col justify-end items-center relative order-2 lg:order-1 ">
                         <div class="relative w-[700px]">
                             <img class="h-80 md:h-[300px] w-auto object-contain object-left absolute right-20 4xs:left-0 bottom-0" src="{{asset('images/img/texturaAP.png')}}"
                                 onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
