@@ -11,15 +11,15 @@ class EmailConfig
         $mail = new PHPMailer(true);
         // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
         $mail->isSMTP();
-        $mail->Host = 'mail.telecable.pe';
+        $mail->Host = 'mail.draadrianapezo.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'info@telecable.pe';
-        $mail->Password = 'info@2025#';
+        $mail->Username = 'info@draadrianapezo.com';
+        $mail->Password = 'adrianapezo2025#';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 465;
         $mail->Subject = '' . $name . ', ' . $mensaje;
         $mail->CharSet = 'UTF-8';
-        $mail->setFrom('info@telecable.pe', 'Telecable');
+        $mail->setFrom('info@draadrianapezo.com', 'Adriana Pezo');
         return $mail;
     }
 }

@@ -960,6 +960,9 @@ class IndexController extends Controller
            
 
             $formlanding = Message::create($data);
+            $this->envioCorreoAdmin($formlanding);
+            $this->envioCorreoCliente($formlanding);
+
             return response()->json(['message' => 'Redirigiendo a Whatsapp']);
         } catch (ValidationException $e) {
             return response()->json(['message' => $e->validator->errors()], 400);
@@ -1054,7 +1057,7 @@ class IndexController extends Controller
         $emailadmin = $generales->email;
         $appUrl = env('APP_URL');
         $name = 'Administrador';
-        $mensaje = "Nueva solicitud de contacto - Telecable";
+        $mensaje = "Nueva solicitud de contacto - Adriana Pezo";
         $mail = EmailConfig::config($name, $mensaje);
 
         try {
@@ -1213,7 +1216,7 @@ class IndexController extends Controller
        
         $name = $data['full_name'];
         $appUrl = env('APP_URL');
-        $mensaje = 'Gracias por comunicarte con Telecable';
+        $mensaje = 'Gracias por comunicarte con Adriana Pezo, en breve nos pondremos en contacto contigo.';
         $mail = EmailConfig::config($name, $mensaje);
         // $baseUrl = 'https://' . $_SERVER['HTTP_HOST'] . '/mail';
         // $baseUrllink = 'https://' . $_SERVER['HTTP_HOST'] . '/';
