@@ -7,7 +7,7 @@
                 <div class="flex justify-center items-center z-40 mx-auto">
                     <a href="{{ url('/') }}">
                         <img
-                            src="{{ asset('images/svg/adriana_pezo.svg') }}"
+                            src="{{ asset('images/svg/logoadrianafinal.svg') }}"
                             alt="Telecable"
                             class="max-w-80"
                         />
