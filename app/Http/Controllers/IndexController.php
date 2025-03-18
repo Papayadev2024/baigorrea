@@ -1121,7 +1121,7 @@ class IndexController extends Controller
                     <td>
                       <p
                         style="
-                          color: #ffffff;
+                          color: #6486CD;
                           font-size: 40px;
                           line-height: normal;
                           font-family: Google Sans;
@@ -1129,7 +1129,7 @@ class IndexController extends Controller
                         "
                       >
                         ¡Gracias
-                        <span style="color: #ffffff">por escribirnos!</span>
+                        <span style="color: #354273">por escribirnos!</span>
                       </p>
                     </td>
                   </tr>
@@ -1138,7 +1138,7 @@ class IndexController extends Controller
                     <td>
                       <p
                         style="
-                          color: #ffffff;
+                          color: #354273;
                           font-weight: 500;
                           font-size: 18px;
                           text-align: center;
@@ -1157,7 +1157,7 @@ class IndexController extends Controller
                     <td>
                       <p
                         style="
-                          color: #ffffff;
+                          color: #354273;
                           font-weight: 500;
                           font-size: 18px;
                           text-align: center;
@@ -1180,7 +1180,7 @@ class IndexController extends Controller
                         '"
                         style="
                           text-decoration: none;
-                          background-color: #59C402;
+                          background-color: #6486CD;
                           color: #ffffff;
                           padding: 13px 20px;
                           display: inline-flex;
@@ -1282,7 +1282,7 @@ class IndexController extends Controller
                     <td>
                       <p
                         style="
-                          color: #ffffff;
+                          color: #6486CD;
                           font-size: 40px;
                           line-height: normal;
                           font-family: Google Sans;
@@ -1290,7 +1290,7 @@ class IndexController extends Controller
                         "
                       >
                         ¡Gracias
-                        <span style="color: #ffffff">por escribirnos!</span>
+                        <span style="color: #354273">por escribirnos!</span>
                       </p>
                     </td>
                   </tr>
@@ -1299,7 +1299,7 @@ class IndexController extends Controller
                     <td>
                       <p
                         style="
-                          color: #ffffff;
+                          color: #354273;
                           font-weight: 500;
                           font-size: 18px;
                           text-align: center;
@@ -1318,7 +1318,7 @@ class IndexController extends Controller
                     <td>
                       <p
                         style="
-                          color: #ffffff;
+                          color: #354273;
                           font-weight: 500;
                           font-size: 18px;
                           text-align: center;
@@ -1341,7 +1341,7 @@ class IndexController extends Controller
                         '"
                         style="
                           text-decoration: none;
-                          background-color: #59C402;
+                          background-color: #6486CD;
                           color: #ffffff;
                           padding: 13px 20px;
                           display: inline-flex;
