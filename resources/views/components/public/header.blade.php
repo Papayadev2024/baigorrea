@@ -9,7 +9,7 @@
                         <img
                             src="{{ asset('images/svg/logoadrianafinal.svg') }}"
                             alt="Adriana Pezo"
-                            class="max-w-80 w-full"
+                            class="max-w-80 w-full 2xl:max-w-96"
                         />
                     </a>
                 </div>
