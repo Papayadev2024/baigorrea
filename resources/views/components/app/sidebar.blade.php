@@ -21,7 +21,7 @@
       </button>
       <!-- Logo -->
       <a class="block mt-8 " href="{{ route('dashboard') }}">
-        <img src="{{ asset('images/img/tc_logotelecable.svg') }}" alt="Telecable" />
+        <img class="w-full" src="{{ asset('images/svg/logoadrianafinal.svg') }}" alt="AdrianaPezo" />
       </a>
     </div>
 
@@ -32,7 +32,7 @@
         <h3 class="text-xs uppercase text-slate-500 font-semibold pl-3">
           <span class="hidden lg:block lg:sidebar-expanded:hidden 2xl:hidden text-center w-6"
             aria-hidden="true">•••</span>
-          <span class="lg:hidden lg:sidebar-expanded:block 2xl:block">Telecable - Backend</span>
+          <span class="lg:hidden lg:sidebar-expanded:block 2xl:block">Adriana Pezo - Backend</span>
         </h3>
         <ul class="mt-3">
 
@@ -65,9 +65,9 @@
             </a>
           </li>
  
-          <x-menu.item id="subscripciones" href="{{ route('subscripciones') }}" icon="fas fa-address-card">
+          {{-- <x-menu.item id="subscripciones" href="{{ route('subscripciones') }}" icon="fas fa-address-card">
             Subscripciones
-          </x-menu.item>
+          </x-menu.item> --}}
   
           
           <x-menu.item id="datosgenerales" href="{{ route('datosgenerales.edit', 1) }}"
@@ -75,28 +75,28 @@
             Datos Generales
           </x-menu.item>
 
-          <x-menu.item id="politicas-de-devolucion" href="{{ route('politicas-de-devolucion.edit', 1) }}"
+          {{-- <x-menu.item id="politicas-de-devolucion" href="{{ route('politicas-de-devolucion.edit', 1) }}"
             icon="fas fa-undo-alt">
             Politicas de Privacidad
-          </x-menu.item>
+          </x-menu.item> --}}
 
-          <x-menu.item id="terminos-y-condiciones" href="{{ route('terminos-y-condiciones.edit', 1) }}"
+          {{-- <x-menu.item id="terminos-y-condiciones" href="{{ route('terminos-y-condiciones.edit', 1) }}"
             icon="fas fa-undo-alt">
             Terminos y Condiciones
-          </x-menu.item>
+          </x-menu.item> --}}
 
 
-          <x-menu.item id="homeview" href="{{ route('homeview.edit', 1) }}" icon="fas fa-address-card">
+          {{-- <x-menu.item id="homeview" href="{{ route('homeview.edit', 1) }}" icon="fas fa-address-card">
             Textos - Home
-          </x-menu.item>
+          </x-menu.item> --}}
 
           {{-- <x-menu.item id="sobrenosotros" href="{{ route('nosotrosview.edit', 1) }}" icon="fas fa-address-card">
             Textos - Nosotros
           </x-menu.item> --}}
 
-          <x-menu.item id="contactoview" href="{{ route('contactoview.edit', 1) }}" icon="fas fa-address-card">
+          {{-- <x-menu.item id="contactoview" href="{{ route('contactoview.edit', 1) }}" icon="fas fa-address-card">
             Textos - Contacto
-          </x-menu.item>
+          </x-menu.item> --}}
 
           {{-- <x-menu.item id="innovaciones" href="{{ route('innovacionesview.edit', 1) }}" icon="fas fa-address-card">
             Textos - Innovacion
@@ -106,17 +106,17 @@
             Textos - Productos
           </x-menu.item> --}}
 
-          <x-menu.item id="benefit" href="{{ route('strength.index') }}" icon="fas fa-address-card">
+          {{-- <x-menu.item id="benefit" href="{{ route('strength.index') }}" icon="fas fa-address-card">
             Caracteristicas
-          </x-menu.item>
+          </x-menu.item> --}}
 
           {{-- <x-menu.item id="slider" href="{{ route('slider.index') }}" icon="fas fa-address-card">
             Slider
           </x-menu.item> --}}
 
-          <x-menu.item id="liquidacion" href="{{ route('liquidacion.index') }}" icon="fas fa-address-card">
+          {{-- <x-menu.item id="liquidacion" href="{{ route('liquidacion.index') }}" icon="fas fa-address-card">
             Beneficios
-          </x-menu.item>
+          </x-menu.item> --}}
 
           {{-- <x-menu.item id="mismarcas" href="{{ route('mismarcas.index') }}" icon="fas fa-address-card">
             Cobertura
@@ -130,9 +130,9 @@
             Testimonios
           </x-menu.item>
 
-          <x-menu.item id="faqs" href="{{ route('faqs.index') }}" icon="fas fa-address-card">
+          {{-- <x-menu.item id="faqs" href="{{ route('faqs.index') }}" icon="fas fa-address-card">
             Preguntas Frecuentes
-          </x-menu.item>
+          </x-menu.item> --}}
 
           
 
@@ -144,14 +144,15 @@
             Blog
           </x-menu.item> --}}
 
-          <x-menu.item id="tags" href="{{ route('tags.index') }}" icon="fas fa-address-card">
+          {{-- <x-menu.item id="tags" href="{{ route('tags.index') }}" icon="fas fa-address-card">
             Etiquetas
-          </x-menu.item>
+          </x-menu.item> --}}
 
-          <x-menu.item id="canales" href="{{ route('canales.index') }}" icon="fas fa-address-card">
+          {{-- <x-menu.item id="canales" href="{{ route('canales.index') }}" icon="fas fa-address-card">
             Canales
-          </x-menu.item>
-            <!-- Subscripciones -->
+          </x-menu.item> --}}
+
+          <!-- Subscripciones -->
           {{-- <li
             class="px-3 py-2 rounded-sm mb-0.5 last:mb-0 @if (in_array(Request::segment(2), ['subscripciones'])) {{ 'bg-slate-900' }} @endif">
             <a class="block text-slate-200 hover:text-white truncate transition duration-150 @if (in_array(Request::segment(2), ['subscripciones'])) {{ 'hover:text-slate-200' }} @endif"
@@ -301,12 +302,12 @@
         </ul>
       </div>
 
-      <x-menu.group title="Productos">
+      {{-- <x-menu.group title="Productos">
         <x-menu.item id="category" href="{{ route('categorias.index') }}" icon="fas fa-list-alt">Categorías</x-menu.item>
-        {{-- <x-menu.item id="subcategory" href="{{ route('subcategorias.index') }}" icon="fas fa-list-alt">Subcategorías</x-menu.item> --}}
-        {{-- <x-menu.item id="microcategory" href="{{ route('microcategorias.index') }}" icon="fas fa-list-alt">Microcategorías</x-menu.item> --}}
+        <x-menu.item id="subcategory" href="{{ route('subcategorias.index') }}" icon="fas fa-list-alt">Subcategorías</x-menu.item>
+        <x-menu.item id="microcategory" href="{{ route('microcategorias.index') }}" icon="fas fa-list-alt">Microcategorías</x-menu.item>
         <x-menu.item id="product" href="{{ route('products.index') }}" icon="fas fa-pager">Productos</x-menu.item>
-      </x-menu.group>
+      </x-menu.group> --}}
 
       <!-- PRODUCTOS -->
       {{-- <div>

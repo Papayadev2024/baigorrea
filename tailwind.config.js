@@ -155,6 +155,7 @@ export default {
                 "2lg": "1100px",
                 xl: "1280px",
                 "2xl": "1536px",
+                "3xl": "1700px",
             },
 
             borderWidth: {
@@ -185,7 +186,7 @@ export default {
     plugins: [
         forms,
         typography,
-        // add custom variant for expanding sidebar
+        require('tailwindcss-animated'),
         plugin(({ addVariant, e }) => {
             addVariant('sidebar-expanded', ({ modifySelectors, separator }) => {
                 modifySelectors(({ className }) => `.sidebar-expanded .${e(`sidebar-expanded${separator}${className}`)}`);

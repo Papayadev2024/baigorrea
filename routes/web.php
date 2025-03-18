@@ -76,10 +76,10 @@ use App\Models\Template;
 /* Las rutas publicas */
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
-Route::get('/nosotros', [IndexController::class, 'nosotros'])->name('nosotros');
-Route::get('/innovaciones', [IndexController::class, 'innovaciones'])->name('innovaciones');
-Route::get('/servicios', [IndexController::class, 'novedades'])->name('novedades');
-Route::get('/contacto', [IndexController::class, 'contacto'])->name('contacto');
+// Route::get('/nosotros', [IndexController::class, 'nosotros'])->name('nosotros');
+// Route::get('/innovaciones', [IndexController::class, 'innovaciones'])->name('innovaciones');
+// Route::get('/servicios', [IndexController::class, 'novedades'])->name('novedades');
+// Route::get('/contacto', [IndexController::class, 'contacto'])->name('contacto');
 
 // Route::get('/servicios', [IndexController::class, 'servicios'])->name('servicios');
 // Route::get('/comentario', [IndexController::class, 'comentario'])->name('comentario');
@@ -92,17 +92,17 @@ Route::get('/contacto', [IndexController::class, 'contacto'])->name('contacto');
 
 
 /* Proceso de pago */
-Route::get('/carrito', [IndexController::class, 'carrito'])->name('carrito');
-Route::get('/pago', [IndexController::class, 'pago'])->name('pago');
-Route::post('/procesar/pago', [IndexController::class, 'procesarPago'])->name('procesar.pago');
-Route::post('/agradecimiento', [IndexController::class, 'agradecimiento'])->name('agradecimiento');
+// Route::get('/carrito', [IndexController::class, 'carrito'])->name('carrito');
+// Route::get('/pago', [IndexController::class, 'pago'])->name('pago');
+// Route::post('/procesar/pago', [IndexController::class, 'procesarPago'])->name('procesar.pago');
+// Route::post('/agradecimiento', [IndexController::class, 'agradecimiento'])->name('agradecimiento');
 
 /* Catálogo y producto */
 // Route::get('/producto/{id}', [IndexController::class, 'producto'])->name('producto');
 // Route::get('/catalogo', [IndexController::class, 'catalogo'])->name('catalogo.all');
 // Route::get('/catalogo/{filtro}', [IndexController::class, 'catalogo'])->name('catalogo');
-Route::post('carrito/buscarProducto', [CarritoController::class, 'buscarProducto'])->name('carrito.buscarProducto');
-Route::get('/coleccion/{filtro}', [IndexController::class, 'coleccion'])->name('coleccion');
+// Route::post('carrito/buscarProducto', [CarritoController::class, 'buscarProducto'])->name('carrito.buscarProducto');
+// Route::get('/coleccion/{filtro}', [IndexController::class, 'coleccion'])->name('coleccion');
 // Route::get('/liquidacion', [IndexController::class, 'liquidacion'])->name('liquidacion');
 Route::get('/buscar', [IndexController::class, 'searchProduct'])->name('buscar');
 Route::post('/procesarcarrito', [IndexController::class, 'procesarCarrito'])->name('procesar.carrito');
@@ -115,6 +115,7 @@ Route::post('/obtenerdata', [IndexController::class, 'obtenerdata'])->name('obte
 
 /* Página 404 */
 Route::get('/404', [IndexController::class, 'error'])->name('error');
+
 /* Formulario de contacto */
 Route::post('guardarContactos', [IndexController::class, 'guardarContacto'])->name('guardarContactos');
 Route::post('guardarContactoWsp', [IndexController::class, 'guardarContactoWsp'])->name('guardarContactoWsp');
@@ -130,8 +131,8 @@ Route::post('/getProductMicrocategoria', [CategoryController::class, 'getProduct
 Route::post('/getTotalProductos', [CategoryController::class, 'getTotalProductos'])->name('getTotalProductos');
 
 /* Políticas */
-Route::get('/politicas-de-devolucion', [IndexController::class, 'politicasDevolucion'])->name('politicas_dev');
-Route::get('/terminos-y-condiciones', [IndexController::class, 'TerminosyCondiciones'])->name('terms_condition');
+// Route::get('/politicas-de-devolucion', [IndexController::class, 'politicasDevolucion'])->name('politicas_dev');
+// Route::get('/terminos-y-condiciones', [IndexController::class, 'TerminosyCondiciones'])->name('terms_condition');
 
 Route::redirect('/register', '/login');
 

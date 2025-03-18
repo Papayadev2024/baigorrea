@@ -2,85 +2,30 @@
 @section('titulo', 'Inicio')
 @section('css_importados')
     <style>
-        .swiper-pagination_productos>.swiper-pagination-bullet-active {
-            background-color: transparent;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            width: 20px;
-            height: 20px;
-            opacity: 1;
-            background-image: url({{ asset('images/svg/image_29.svg') }});
-        }
-
-        .swiper-pagination_productos .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
-            background-color: transparent;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            width: 20px;
-            height: 20px;
-            opacity: 1;
-            background-image: url({{ asset('images/svg/image_30.svg') }});
-        }
-
-        .swiper-button-next {
-            background-color: #FFD9C7;
-            background-repeat: no-repeat;
-            background-position: center;
-            width: calc(var(--swiper-navigation-size) / 29 * 27) !important;
-            height: 50px;
-            border-radius: 50%;
-            transition: background-color 0.3s ease-in;
-            background-image: url({{ asset('images/svg/image_43.svg') }})
-        }
-
-        .swiper-button-next:hover {
-            background-color: #FF5E14;
-            opacity: 1;
-        }
-
-        .swiper-button-prev {
-            background-color: #FFD9C7;
-            background-repeat: no-repeat;
-            background-position: center;
-            width: calc(var(--swiper-navigation-size) / 29 * 27) !important;
-            height: 50px;
-            border-radius: 50%;
-            transition: background-color 0.3s ease-in;
-            background-image: url({{ asset('images/svg/image_44.svg') }})
-        }
-
-        .swiper-button-prev:hover {
-            background-color: #FF5E14;
-            opacity: 1;
-        }
-
-        .slider-pagination {
-           
-            margin-bottom: 30px;
-        }
+        .swiper-testimonios .swiper-pagination-bullet {
+            width: 14px;
+            height: 8px;
+            border-radius: 6px;
+            background-color: #052F4E !important;
         
-        /* Estilo de los puntos de paginación */
-        .slider-pagination .swiper-pagination-bullet {
-            width: 16px; /* Ancho personalizado */
-            height: 9px; /* Alto personalizado */
-            border-radius: 6px; /* Bordes redondeados */
-            background-color: #F07407 !important; /* Color base */
-            transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
-        }
-        
-        /* Estilo de los puntos que no están activos */
-        .slider-pagination .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
-            background-color: white !important; /* Color más tenue */
-            opacity: 0.8; /* Opacidad constante */
         }
 
-        #imagen-zona {
-            transition: opacity 0.3s ease-in-out;
+        .swiper-testimonios .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+            background-color: #05304e56!important;
+            opacity: 1;
         }
-        .blocker{
-            z-index: 50!important;
+
+        .swiper-servicios .swiper-pagination-bullet {
+            width: 14px;
+            height: 8px;
+            border-radius: 6px;
+            background-color: #052F4E !important;
+        
+        }
+
+        .swiper-servicios .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+            background-color: #05304e56!important;
+            opacity: 1;
         }
     </style>
 @stop
@@ -95,20 +40,20 @@
                 <div class="grid grid-cols-2 lg:grid-cols-5 gap-5 lg:gap-0">
                     <div class="col-span-2 flex flex-col justify-between pb-0 lg:pb-10">
                         <div class="flex flex-col p-2 justify-center items-start gap-8">
-                            <h2 class="text-[#09262A] font-aequitas_regular text-6xl xl:text-7xl 2xl:text-8xl !leading-10 2xl:!leading-[60px]">Acompanamos el bienestar emocional de tu hijo</h2>
+                            <h2 class="text-[#09262A] font-aequitas_regular text-6xl xl:text-7xl 2xl:text-8xl !leading-10 2xl:!leading-[60px]" data-aos="fade-down">Acompanamos el bienestar emocional de tu hijo</h2>
                             
-                            <h2 class="text-[#1B4146] text-base xl:text-lg 2xl:text-xl font-Montserrat_Regular">
+                            <h2 class="text-[#1B4146] text-base xl:text-lg 2xl:text-xl font-Montserrat_Regular" data-aos="fade-down">
                                 Sabemos lo importante que es el bienestar emocional de los niños y adolescentes. Estamos aquí para escucharte y brindarte el apoyo que necesitas con empatía y profesionalismo.
                             </h2>
 
-                            <div class="flex flex-row justify-start items-start">
-                                <a href="#productoscarrusel" id="scrollButton"
-                                    class="text-white py-3 px-6 bg-[#B380B5] rounded-3xl text-base 2xl:text-lg font-Montserrat_SemiBold text-center max-w-xs">
+                            <div class="flex flex-row justify-start items-start" data-aos="fade-down">
+                                <a href="#productoscarrusel" id="scrollButton" 
+                                    class=" text-white py-3 px-6 bg-[#B380B5] rounded-3xl text-base 2xl:text-lg font-Montserrat_SemiBold text-center max-w-xs">
                                     Nuestros servicios
                                 </a>
                             </div>
                         </div>
-                        <div class="flex flex-col p-2 justify-center items-start">
+                        <div class="flex flex-col p-2 justify-center items-start" data-aos="fade-down">
                             <h2 class="text-[#1B4146] text-base xl:text-lg 2xl:text-xl font-Montserrat_Regular">
                                 Haz tu consulta
                             </h2>
@@ -119,7 +64,7 @@
                     </div>
     
                     <div class="col-span-2 flex flex-col justify-end items-center relative order-2 lg:order-1 ">
-                        <div class="relative w-[700px]">
+                        <div class="relative w-[700px]" data-aos="fade-down">
                             <img class="h-80 md:h-[300px] w-auto object-contain object-left absolute right-20 4xs:left-0 bottom-0" src="{{asset('images/img/texturaAP.png')}}"
                                 onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
                             <img class="h-96 md:h-[550px] w-full object-contain  object-center relative z-10" src="{{asset('images/img/AdrianaPezo.png')}}"
@@ -129,8 +74,8 @@
     
                     <div class="col-span-2 lg:col-span-1 flex flex-col sm:flex-row gap-5 sm:gap-10 lg:flex-col justify-around items-start lg:items-end order-1 lg:order-2">
                         
-                        <div class="grid grid-cols-1 gap-2 xl:gap-4 z-20 min-w-[320px] 2xl:w-[400px] max-w-[600px]">
-                            <div id="form-1" class="bg-[#F2F5FC] p-6 rounded-3xl flex flex-col gap-4">
+                        <div class="grid grid-cols-1 gap-2 xl:gap-4 z-20 min-w-[320px] xl:w-[340px] 2xl:w-[400px] 3xl:w-[450px] max-w-[600px] animate-jump-out animate-once animate-duration-[2000ms] animate-reverse">
+                            <div id="form-1" class="bg-[#F2F5FC] p-6 2xl:p-8 rounded-3xl flex flex-col gap-4">
                                 <h2 class="text-[#1B4146] text-base sm:text-lg 2xl:text-xl font-Montserrat_SemiBold">
                                     Solicita información ahora vía WhatsApp
                                 </h2>
@@ -172,8 +117,8 @@
             </div>
         </section>
 
-        <section class="w-full items-start px-[5%] py-8 bg-[#6486CD] text-[#252222] bg-cover bg-center" style="background-image: url({{ asset('images/img/textura_beneficios.png') }})">
-            <div class="grid grid-cols-1">
+        <section  class="w-full items-start px-[5%] py-8 bg-[#6486CD] text-[#252222] bg-cover bg-center" style="background-image: url({{ asset('images/img/textura_beneficios.png') }})">
+            <div class="grid grid-cols-1" data-aos="fade-down">
                 <div>
                     <div class="swiper beneficios">
                         <div class="swiper-wrapper">
@@ -226,9 +171,10 @@
             </div>
         </section>
 
-        <section class="px-[5%] py-10 lg:py-20 bg-white">
-            <div class="flex flex-col gap-8 md:gap-12">
-                <div class='flex flex-col lg:flex-row lg:justify-between items-start justify-center gap-5'>
+        <section class="px-[5%] py-10 lg:py-20 bg-white" id="productoscarrusel">
+            <div class="flex flex-col gap-8 md:gap-12" >
+                
+                <div data-aos="fade-down" class='flex flex-col lg:flex-row lg:justify-between items-start justify-center gap-5'>
                   <div class='flex flex-col gap-3 max-w-lg'>
                       <h1 class="tracking-tighter text-4xl 2xl:text-5xl font-Montserrat_Bold font-bold text-[#09262A] leading-none">
                         Nuestros servicios
@@ -244,7 +190,7 @@
                         Si crees que necesita apoyo,
                         estoy aquí para ayudarte
                       </p>
-                      <a 
+                      <a target="_blank"  href="https://api.whatsapp.com/send?phone={{ $general[0]->whatsapp }}&text={{ $general[0]->mensaje_whatsapp }}"
                         class="w-auto bg-[#6486CD] px-6 py-4 rounded-3xl text-white font-Montserrat_Medium">
                         Hablar con un experto
                       </a>
@@ -252,9 +198,9 @@
                     </div>
                   </div>
                 </div>
-                <div class=" grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-y-5 gap-x-8 hidden sm:grid">
-                
-                    <div class="flex flex-col group relative">
+
+                <div  class="grilla grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-y-5 gap-x-8 hidden sm:grid">
+                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
                         <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
                             <div class="max-w-full flex flex-col items-center justify-center w-full">
                                 <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_1.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
@@ -262,17 +208,17 @@
                         </div>
                         <div class="flex flex-col justify-center items-center gap-1 mt-3">
                             <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl">Autismo (TEA)</h2>
+                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Autismo (TEA)</h2>
                             </div>
                         </div>
                         <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a class="text-white text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
+                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
                                 Agendar cita
                             </a>
                         </div>
                     </div>
 
-                    <div class="flex flex-col group relative">
+                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
                         <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
                             <div class="max-w-full flex flex-col items-center justify-center w-full">
                                 <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_2.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
@@ -280,17 +226,17 @@
                         </div>
                         <div class="flex flex-col justify-center items-center gap-1 mt-3">
                             <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl">TDAH (trastorno por déficit de atención e hiperactividad)</h2>
+                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">TDAH (trastorno por déficit de atención e hiperactividad)</h2>
                             </div>
                         </div>
                         <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a class="text-white text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
+                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
                                 Agendar cita
                             </a>
                         </div>
                     </div>
 
-                    <div class="flex flex-col group relative">
+                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
                         <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
                             <div class="max-w-full flex flex-col items-center justify-center w-full">
                                 <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_3.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
@@ -298,17 +244,17 @@
                         </div>
                         <div class="flex flex-col justify-center items-center gap-1 mt-3">
                             <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl">Impulsividad, agresividad en niños y adolescentes</h2>
+                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Impulsividad, agresividad en niños y adolescentes</h2>
                             </div>
                         </div>
                         <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a class="text-white text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
+                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
                                 Agendar cita
                             </a>
                         </div>
                     </div>
 
-                    <div class="flex flex-col group relative">
+                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
                         <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
                             <div class="max-w-full flex flex-col items-center justify-center w-full">
                                 <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_4.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
@@ -316,17 +262,17 @@
                         </div>
                         <div class="flex flex-col justify-center items-center gap-1 mt-3">
                             <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl">Trastornos de conducta en la infancia y la adolescencia</h2>
+                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos de conducta en la infancia y la adolescencia</h2>
                             </div>
                         </div>
                         <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a class="text-white text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
+                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
                                 Agendar cita
                             </a>
                         </div>
                     </div>
 
-                    <div class="flex flex-col group relative">
+                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
                         <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
                             <div class="max-w-full flex flex-col items-center justify-center w-full">
                                 <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_5.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
@@ -334,17 +280,17 @@
                         </div>
                         <div class="flex flex-col justify-center items-center gap-1 mt-3">
                             <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl">Trastornos del estado de ánimo en la infancia y la adolescencia</h2>
+                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos del estado de ánimo en la infancia y la adolescencia</h2>
                             </div>
                         </div>
                         <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a class="text-white text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
+                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
                                 Agendar cita
                             </a>
                         </div>
                     </div>
 
-                    <div class="flex flex-col group relative">
+                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
                         <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
                             <div class="max-w-full flex flex-col items-center justify-center w-full">
                                 <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_6.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
@@ -352,17 +298,17 @@
                         </div>
                         <div class="flex flex-col justify-center items-center gap-1 mt-3">
                             <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl">Trastornos de ansiedad</h2>
+                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos de ansiedad</h2>
                             </div>
                         </div>
                         <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a class="text-white text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
+                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
                                 Agendar cita
                             </a>
                         </div>
                     </div>
 
-                    <div class="flex flex-col group relative">
+                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
                         <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
                             <div class="max-w-full flex flex-col items-center justify-center w-full">
                                 <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_7.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
@@ -370,17 +316,17 @@
                         </div>
                         <div class="flex flex-col justify-center items-center gap-1 mt-3">
                             <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl">Transtornos obsesivo compulsivo</h2>
+                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Transtornos obsesivo compulsivo</h2>
                             </div>
                         </div>
                         <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a class="text-white text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
+                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
                                 Agendar cita
                             </a>
                         </div>
                     </div>
 
-                    <div class="flex flex-col group relative">
+                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
                         <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
                             <div class="max-w-full flex flex-col items-center justify-center w-full">
                                 <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_8.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
@@ -388,17 +334,17 @@
                         </div>
                         <div class="flex flex-col justify-center items-center gap-1 mt-3">
                             <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl">Trastornos de la conducta alimentaria: anorexia, bulimia</h2>
+                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos de la conducta alimentaria: anorexia, bulimia</h2>
                             </div>
                         </div>
                         <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a class="text-white text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
+                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
                                 Agendar cita
                             </a>
                         </div>
                     </div>
 
-                    <div class="flex flex-col group relative">
+                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
                         <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
                             <div class="max-w-full flex flex-col items-center justify-center w-full">
                                 <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_9.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
@@ -406,17 +352,17 @@
                         </div>
                         <div class="flex flex-col justify-center items-center gap-1 mt-3">
                             <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl">Transtornos relacionados con traumas y factores de estrés</h2>
+                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Transtornos relacionados con traumas y factores de estrés</h2>
                             </div>
                         </div>
                         <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a class="text-white text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
+                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
                                 Agendar cita
                             </a>
                         </div>
                     </div>
 
-                    <div class="flex flex-col group relative">
+                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
                         <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
                             <div class="max-w-full flex flex-col items-center justify-center w-full">
                                 <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_10.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
@@ -424,17 +370,17 @@
                         </div>
                         <div class="flex flex-col justify-center items-center gap-1 mt-3">
                             <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl">Trastornos del sueño-vigilia</h2>
+                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos del sueño-vigilia</h2>
                             </div>
                         </div>
                         <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a class="text-white text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
+                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
                                 Agendar cita
                             </a>
                         </div>
                     </div>
 
-                    <div class="flex flex-col group relative">
+                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
                         <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
                             <div class="max-w-full flex flex-col items-center justify-center w-full">
                                 <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_11.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
@@ -442,17 +388,17 @@
                         </div>
                         <div class="flex flex-col justify-center items-center gap-1 mt-3">
                             <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl">Depresión en niños y adolescentes</h2>
+                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Depresión en niños y adolescentes</h2>
                             </div>
                         </div>
                         <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a class="text-white text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
+                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
                                 Agendar cita
                             </a>
                         </div>
                     </div>
 
-                    <div class="flex flex-col group relative">
+                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
                         <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
                             <div class="max-w-full flex flex-col items-center justify-center w-full">
                                 <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_12.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
@@ -460,24 +406,24 @@
                         </div>
                         <div class="flex flex-col justify-center items-center gap-1 mt-3">
                             <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl">Trastornos del aprendizaje</h2>
+                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos del aprendizaje</h2>
                             </div>
                         </div>
                         <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a class="text-white text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
+                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
                                 Agendar cita
                             </a>
                         </div>
                     </div>
-
                 </div>
+
                 <div class="flex sm:hidden">
-                    <div class="w-full">
+                    <div class="w-full" data-aos="fade-down">
                         <div class="swiper servicios">
                             <div class="swiper-wrapper">
 
                                 <div class="swiper-slide">
-                                    <div class="flex flex-col group relative">
+                                    <div class="servicio flex flex-col group relative">
                                         <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
                                             <div class="max-w-full flex flex-col items-center justify-center w-full">
                                                 <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_1.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
@@ -485,11 +431,11 @@
                                         </div>
                                         <div class="flex flex-col justify-center items-center gap-1 mt-3">
                                             <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl">Autismo (TEA)</h2>
+                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Autismo (TEA)</h2>
                                             </div>
                                         </div>
                                         <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a class="text-white text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
+                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
                                                 Agendar cita
                                             </a>
                                         </div>
@@ -497,7 +443,7 @@
                                 </div>
 
                                 <div class="swiper-slide">
-                                    <div class="flex flex-col group relative">
+                                    <div class="servicio flex flex-col group relative">
                                         <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
                                             <div class="max-w-full flex flex-col items-center justify-center w-full">
                                                 <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_2.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
@@ -505,11 +451,11 @@
                                         </div>
                                         <div class="flex flex-col justify-center items-center gap-1 mt-3">
                                             <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl">TDAH (trastorno por déficit de atención e hiperactividad)</h2>
+                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">TDAH (trastorno por déficit de atención e hiperactividad)</h2>
                                             </div>
                                         </div>
                                         <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a class="text-white text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
+                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
                                                 Agendar cita
                                             </a>
                                         </div>
@@ -517,7 +463,7 @@
                                 </div>
 
                                 <div class="swiper-slide">
-                                    <div class="flex flex-col group relative">
+                                    <div class="servicio flex flex-col group relative">
                                         <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
                                             <div class="max-w-full flex flex-col items-center justify-center w-full">
                                                 <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_3.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
@@ -525,11 +471,11 @@
                                         </div>
                                         <div class="flex flex-col justify-center items-center gap-1 mt-3">
                                             <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl">Impulsividad, agresividad en niños y adolescentes</h2>
+                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Impulsividad, agresividad en niños y adolescentes</h2>
                                             </div>
                                         </div>
                                         <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a class="text-white text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
+                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
                                                 Agendar cita
                                             </a>
                                         </div>
@@ -537,7 +483,7 @@
                                 </div>
 
                                 <div class="swiper-slide">
-                                    <div class="flex flex-col group relative">
+                                    <div class="servicio flex flex-col group relative">
                                         <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
                                             <div class="max-w-full flex flex-col items-center justify-center w-full">
                                                 <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_4.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
@@ -545,26 +491,190 @@
                                         </div>
                                         <div class="flex flex-col justify-center items-center gap-1 mt-3">
                                             <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl">Trastornos de conducta en la infancia y la adolescencia</h2>
+                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos de conducta en la infancia y la adolescencia</h2>
                                             </div>
                                         </div>
                                         <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a class="text-white text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
+                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
+                                                Agendar cita
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="servicio flex flex-col group relative">
+                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
+                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
+                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_5.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
+                                            <div class="flex flex-row w-full justify-center items-center">
+                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos del estado de ánimo en la infancia y la adolescencia</h2>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
+                                                Agendar cita
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="servicio flex flex-col group relative">
+                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
+                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
+                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_6.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
+                                            <div class="flex flex-row w-full justify-center items-center">
+                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos de ansiedad</h2>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
+                                                Agendar cita
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="servicio flex flex-col group relative">
+                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
+                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
+                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_7.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
+                                            <div class="flex flex-row w-full justify-center items-center">
+                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Transtornos obsesivo compulsivo</h2>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
+                                                Agendar cita
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="servicio flex flex-col group relative">
+                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
+                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
+                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_8.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
+                                            <div class="flex flex-row w-full justify-center items-center">
+                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos de la conducta alimentaria: anorexia, bulimia</h2>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
+                                                Agendar cita
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="servicio flex flex-col group relative">
+                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
+                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
+                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_9.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
+                                            <div class="flex flex-row w-full justify-center items-center">
+                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Transtornos relacionados con traumas y factores de estrés</h2>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
+                                                Agendar cita
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="servicio flex flex-col group relative">
+                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
+                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
+                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_10.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
+                                            <div class="flex flex-row w-full justify-center items-center">
+                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos del sueño-vigilia</h2>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
+                                                Agendar cita
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="servicio flex flex-col group relative">
+                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
+                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
+                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_11.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
+                                            <div class="flex flex-row w-full justify-center items-center">
+                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Depresión en niños y adolescentes</h2>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
+                                                Agendar cita
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                    <div class="servicio flex flex-col group relative">
+                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
+                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
+                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_12.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
+                                            <div class="flex flex-row w-full justify-center items-center">
+                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos del aprendizaje</h2>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
                                                 Agendar cita
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="flex flex-row justify-start ml-10">
+                                <div class="swiper-servicios !flex justify-center py-3 mt-3 "></div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
         
        
         <section class="bg-center bg-cover" style="background-image: url({{ asset('images/img/textura_testimonios.png') }})">
-            <div class="grid grid-cols-1 md:grid-cols-2 w-full gap-12 px-[5%]">
+            <div data-aos="fade-down" class="grid grid-cols-1 md:grid-cols-2 w-full gap-12 px-[5%]">
       
               <div class="flex flex-col justify-end items-center px-0 lg:px-[5%] order-2 md:order-1">
                 <div class="w-full max-h-[560px] 2xl:max-h-[1000px] flex flex-col justify-end -mt-20  2xl:mt-0">
@@ -579,40 +689,28 @@
                 <div class="w-full">
                     <div class="swiper testimonios">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="bg-[#FFFFFF] relative p-5 lg:p-8 gap-3 flex flex-col rounded-xl h-auto">
-                                    <div>
-                                        <p class="text-[#1B4146] text-base lg:text-[17px] 2xl:text-xl font-Montserrat_Regular line-clamp-5">
-                                            Un servicio muy humano y profesional, nos sentimos acompañados en todo momento. La paciencia y dedicación de la Dra. Adriana han sido clave en nuestra experienciaDra."
-                                        </p>
-                                    </div>
-                                    <div class="flex flex-row gap-3 items-center">
-                                        <img class="w-12 h-12 rounded-full object-contain"  src="{{ asset('images/img/testimonios_AP.png')}}" />
-                                        <div class="flex flex-col gap-0">
-                                            <h3 class="text-[#09262A] font-Montserrat_SemiBold leading-none">Sofia Fernandes</h3>
-                                            <span class="text-[#1B4146] text-sm font-Montserrat_Regular leading-none">Mamá</span>
+                            @foreach ($testimonie as $testimony)
+                                <div class="swiper-slide">
+                                    <div class="bg-[#FFFFFF] relative p-5 lg:p-8 gap-3 flex flex-col rounded-xl h-auto">
+                                        <div>
+                                            <p class="text-[#1B4146] text-base lg:text-[17px] 2xl:text-xl font-Montserrat_Regular line-clamp-5">
+                                                {{$testimony->testimonie}}
+                                            </p>
                                         </div>
-                                    
+                                        <div class="flex flex-row gap-3 items-center">
+                                            <img class="w-12 h-12 rounded-full object-contain"  src="{{ asset($testimony->ocupation)}}" />
+                                            <div class="flex flex-col gap-0">
+                                                <h3 class="text-[#09262A] font-Montserrat_SemiBold leading-none">{{$testimony->name}}</h3>
+                                                <span class="text-[#1B4146] text-sm font-Montserrat_Regular leading-none">{{$testimony->email}}</span>
+                                            </div>
+                                        
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="bg-[#FFFFFF] relative p-5 lg:p-8 gap-3 flex flex-col rounded-xl h-auto">
-                                    <div>
-                                        <p class="text-[#1B4146] text-base lg:text-[17px] 2xl:text-xl font-Montserrat_Regular line-clamp-5">
-                                            Un servicio muy humano y profesional, nos sentimos acompañados en todo momento. La paciencia y dedicación de la Dra. Adriana han sido clave en nuestra experienciaDra."
-                                        </p>
-                                    </div>
-                                    <div class="flex flex-row gap-3 items-center">
-                                        <img class="w-12 h-12 rounded-full object-contain"  src="{{ asset('images/img/testimonios_AP.png')}}" />
-                                        <div class="flex flex-col gap-0">
-                                            <h3 class="text-[#09262A] font-Montserrat_SemiBold leading-none">Sofia Fernandes</h3>
-                                            <span class="text-[#1B4146] text-sm font-Montserrat_Regular leading-none">Mamá</span>
-                                        </div>
-                                    
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
+                        </div>
+                        <div class="flex flex-row justify-start ml-10">
+                            <div class="swiper-testimonios !flex justify-center py-3 mt-3 "></div>
                         </div>
                     </div>
                 </div>
@@ -634,7 +732,72 @@
 
 
 @section('scripts_importados')
+    <script>
+        const servicios = document.querySelectorAll('.grilla .servicio');
+
+        // Añade event listeners para el hover
+        servicios.forEach(servicio => {
+            servicio.addEventListener('mouseenter', () => {
+                servicio.style.transform = 'scale(1.05)'; // Aplica el zoom
+                servicio.style.transition = 'transform 0.3s ease'; // Suaviza la transición
+            });
+
+            servicio.addEventListener('mouseleave', () => {
+                servicio.style.transform = 'scale(1)'; // Vuelve al tamaño original
+            });
+        });
+    </script>
+
+    <script>
+        document.getElementById('scrollButton').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+            smoothScroll('#productoscarrusel', 800); // 800ms de duración del desplazamiento
+        });
+
+        // Función para desplazamiento suave
+        function smoothScroll(target, duration) {
+            const targetElement = document.querySelector(target);
+            const targetPosition = targetElement.getBoundingClientRect().top;
+            const startPosition = window.pageYOffset;
+            let startTime = null;
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = easeInOutQuad(timeElapsed, startPosition, targetPosition, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+
+            // Función de easing para suavizar el desplazamiento
+            function easeInOutQuad(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+
+            requestAnimationFrame(animation);
+        }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
     
+        const whatsappNumber = "1234567890";
+        const servicios = document.querySelectorAll(".servicio");
+   
+                servicios.forEach((servicio) => {
+                    
+                    const nombreServicio = servicio.querySelector(".nombreServicio").textContent;
+                    const mensaje = encodeURIComponent(`Estoy interesad@ en el servicio de tratamiento: *${nombreServicio}*`);
+                    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${mensaje}`;
+                    const botonAgendar = servicio.querySelector("a");
+                    botonAgendar.setAttribute("href", whatsappLink);
+                });
+        });
+    </script>
+
     <script>   
         $('#modalformcotizar').submit(function(event) {
             event.preventDefault();
@@ -876,6 +1039,11 @@
                    
                 },
             },
+            pagination: {
+                    el: ".swiper-servicios",
+                    clickable: true,
+                    dynamicBullets: true,
+            },
         });
 
         var swiper = new Swiper(".lugares", {
@@ -998,6 +1166,11 @@
             spaceBetween: 15,
             loop: true,
             centeredSlides: false,
+            pagination: {
+                    el: ".swiper-testimonios",
+                    clickable: true,
+                    dynamicBullets: true,
+            },
         });
     </script>
 

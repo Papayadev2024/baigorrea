@@ -8,17 +8,19 @@
             <div class="p-3">
         
                 <div class="p-6">
-                    
+                    <p class="font-bold">Nombre completo:</p>
+                    <p> {{ $message->full_name }} </p>
+                    <br>
                     <p class="font-bold">Correo:</p>
                     <p> {{ $message->email }} </p>
                     <br>
-                    <p class="font-bold">Teléfono:</p>
-                    <p> {{ $message->phone }} </p>
-                    <br>
-                    <p class="font-bold">Mensaje:</p>
+                    <p class="font-bold ">Teléfono:</p>
+                    <p class="mb-5"> {{ $message->phone }} </p>
+                    {{-- <br> --}}
+                    {{-- <p class="font-bold">Mensaje:</p>
                     <p class="mb-5">
                         {{ $message->message }}
-                    </p>
+                    </p> --}}
 
                     <a href="{{route('mensajes.index')}}" class="bg-blue-500 px-4 py-2 rounded text-white"><span><i class="fa-solid fa-arrow-left mr-2"></i></span> Volver</a>
         
