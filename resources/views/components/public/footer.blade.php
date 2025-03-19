@@ -13,7 +13,7 @@
             <div class="flex flex-col gap-3 text-center">
                 <h3 class="text-3xl 2xl:text-4xl font-Montserrat_SemiBold text-white">¿Listo para dar el primer paso?</h3>
                 <p class="font-Montserrat_Regular text-base xl:text-lg 2xl:text-xl text-white">Solicita información ahora y empieza el camino hacia el bienestar de tu hijo.</p>
-                <a href="https://api.whatsapp.com/send?phone={{ $general[0]->whatsapp }}&text={{ $general[0]->mensaje_whatsapp }}" target="_blank" class="font-Montserrat_Medium text-[#B380B5] py-3 px-2 bg-[#E4EFF0] justify-center items-center rounded-3xl inline-flex text-base xl:text-lg 2xl:text-xl w-full max-w-xs 2xl:max-w-sm mx-auto mt-6">
+                <a href="#bannerprincipal" id="irawsp"  class="font-Montserrat_Medium text-[#B380B5] py-3 px-2 bg-[#E4EFF0] justify-center items-center rounded-3xl inline-flex text-base xl:text-lg 2xl:text-xl w-full max-w-xs 2xl:max-w-sm mx-auto mt-6">
                     <span>Hablar con la Dra. Adriana Pezo</span>
                 </a>
             </div>

@@ -34,7 +34,7 @@
     <main>
         
        
-        <section>
+        <section id="bannerprincipal">
             <div class="flex flex-col gap-10 w-full px-[5%] pt-10 md:pt-20 bg-white overflow-hidden">
                 
                 <div class="grid grid-cols-2 lg:grid-cols-5 gap-5 lg:gap-0">
@@ -672,61 +672,61 @@
             </div>
         </section>
         
-       
-        <section class="bg-center bg-cover" style="background-image: url({{ asset('images/img/textura_testimonios.png') }})">
-            <div data-aos="fade-down" class="grid grid-cols-1 md:grid-cols-2 w-full gap-12 px-[5%]">
-      
-              <div class="flex flex-col justify-end items-center px-0 lg:px-[5%] order-2 md:order-1">
-                <div class="w-full max-h-[560px] 2xl:max-h-[1000px] flex flex-col justify-end -mt-20  2xl:mt-0">
-                    <img class="w-full h-full object-contain object-bottom"  src="{{ asset('images/img/testimonios_AP.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                </div>
-              </div>
-      
-              <div class="flex flex-col justify-center gap-5 text-textWhite lg:pr-[5%] py-10 xl:py-12 order-1 md:order-2">
-                <h1 class="tracking-tighter text-2xl  lg:text-4xl 2xl:text-5xl font-Montserrat_Bold font-bold text-[#09262A] leading-none">
-                    Lo que dicen las familias
-                </h1>
-                <div class="w-full">
-                    <div class="swiper testimonios">
-                        <div class="swiper-wrapper">
-                            @foreach ($testimonie as $testimony)
-                                <div class="swiper-slide">
-                                    <div class="bg-[#FFFFFF] relative p-5 lg:p-8 gap-3 flex flex-col rounded-xl h-auto">
-                                        <div>
-                                            <p class="text-[#1B4146] text-base lg:text-[17px] 2xl:text-xl font-Montserrat_Regular line-clamp-5">
-                                                {{$testimony->testimonie}}
-                                            </p>
-                                        </div>
-                                        <div class="flex flex-row gap-3 items-center">
-                                            <img class="w-12 h-12 rounded-full object-contain"  src="{{ asset($testimony->ocupation)}}" />
-                                            <div class="flex flex-col gap-0">
-                                                <h3 class="text-[#09262A] font-Montserrat_SemiBold leading-none">{{$testimony->name}}</h3>
-                                                <span class="text-[#1B4146] text-sm font-Montserrat_Regular leading-none">{{$testimony->email}}</span>
-                                            </div>
-                                        
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                        <div class="flex flex-row justify-start ml-10">
-                            <div class="swiper-testimonios !flex justify-center py-3 mt-3 "></div>
-                        </div>
+        @if ($testimonie->count() > 0)
+            <section class="bg-center bg-cover" style="background-image: url({{ asset('images/img/textura_testimonios.png') }})">
+                <div data-aos="fade-down" class="grid grid-cols-1 md:grid-cols-2 w-full gap-12 px-[5%]">
+        
+                <div class="flex flex-col justify-end items-center px-0 lg:px-[5%] order-2 md:order-1">
+                    <div class="w-full max-h-[560px] 2xl:max-h-[1000px] flex flex-col justify-end -mt-20  2xl:mt-0">
+                        <img class="w-full h-full object-contain object-bottom"  src="{{ asset('images/img/testimonios_AP.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
                     </div>
                 </div>
-                <div class="flex flex-col p-2 justify-center items-end">
-                    <h2 class="text-[#1B4146] text-base xl:text-lg 2xl:text-xl font-Montserrat_Regular">
-                        Haz tu consulta
-                    </h2>
-                    <p class="text-[#1B4146] text-base xl:text-lg 2xl:text-xl font-Montserrat_Bold">
-                        (+51) 949 299 959
-                    </p>
-                </div>
-              </div>
-
-            </div>
-          </section>
         
+                <div class="flex flex-col justify-center gap-5 text-textWhite lg:pr-[5%] py-10 xl:py-12 order-1 md:order-2">
+                    <h1 class="tracking-tighter text-2xl  lg:text-4xl 2xl:text-5xl font-Montserrat_Bold font-bold text-[#09262A] leading-none">
+                        Lo que dicen las familias
+                    </h1>
+                    <div class="w-full">
+                        <div class="swiper testimonios">
+                            <div class="swiper-wrapper">
+                                @foreach ($testimonie as $testimony)
+                                    <div class="swiper-slide">
+                                        <div class="bg-[#FFFFFF] relative p-5 lg:p-8 gap-3 flex flex-col rounded-xl h-auto">
+                                            <div>
+                                                <p class="text-[#1B4146] text-base lg:text-[17px] 2xl:text-xl font-Montserrat_Regular line-clamp-5">
+                                                    {{$testimony->testimonie}}
+                                                </p>
+                                            </div>
+                                            <div class="flex flex-row gap-3 items-center">
+                                                <img class="w-12 h-12 rounded-full object-contain"  src="{{ asset($testimony->ocupation)}}" />
+                                                <div class="flex flex-col gap-0">
+                                                    <h3 class="text-[#09262A] font-Montserrat_SemiBold leading-none">{{$testimony->name}}</h3>
+                                                    <span class="text-[#1B4146] text-sm font-Montserrat_Regular leading-none">{{$testimony->email}}</span>
+                                                </div>
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                            <div class="flex flex-row justify-start ml-10">
+                                <div class="swiper-testimonios !flex justify-center py-3 mt-3 "></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col p-2 justify-center items-end">
+                        <h2 class="text-[#1B4146] text-base xl:text-lg 2xl:text-xl font-Montserrat_Regular">
+                            Haz tu consulta
+                        </h2>
+                        <p class="text-[#1B4146] text-base xl:text-lg 2xl:text-xl font-Montserrat_Bold">
+                            (+51) 949 299 959
+                        </p>
+                    </div>
+                </div>
+
+                </div>
+            </section>    
+        @endif    
 
     </main>
 
@@ -752,6 +752,11 @@
         document.getElementById('scrollButton').addEventListener('click', function(event) {
             event.preventDefault(); // Evita el comportamiento predeterminado del enlace
             smoothScroll('#productoscarrusel', 800); // 800ms de duración del desplazamiento
+        });
+
+        document.getElementById('irawsp').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+            smoothScroll('#bannerprincipal', 800); // 800ms de duración del desplazamiento
         });
 
         // Función para desplazamiento suave
@@ -784,7 +789,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
     
-        const whatsappNumber = "1234567890";
+        const whatsappNumber = {{ $general[0]->whatsapp }};
         const servicios = document.querySelectorAll(".servicio");
    
                 servicios.forEach((servicio) => {
