@@ -40,7 +40,7 @@
                 <div class="grid grid-cols-2 lg:grid-cols-5 gap-5 lg:gap-0">
                     <div class="col-span-2 flex flex-col justify-between pb-0 lg:pb-10">
                         <div class="flex flex-col p-2 justify-center items-start gap-8">
-                            <h2 class="text-[#09262A] font-merchant_regular text-6xl xl:text-7xl 2xl:text-8xl leading-none" data-aos="fade-down">Acompañamos el bienestar emocional y conductual de tu hijo</h2>
+                            <h2 class="text-[#09262A] font-merchant_regular text-5xl xl:text-6xl 2xl:text-7xl leading-none tracking-tighter" data-aos="fade-down">Acompañamos el bienestar emocional y conductual de tu hijo</h2>
                             
                             <h2 class="text-[#1B4146] text-base xl:text-lg 2xl:text-xl font-Montserrat_Regular" data-aos="fade-down">
                                 Sabemos lo importante que es el bienestar emocional de los niños y adolescentes. Estamos aquí para escucharte y brindarte el apoyo que necesitas con empatía y profesionalismo.
