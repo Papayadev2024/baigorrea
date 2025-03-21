@@ -60,6 +60,8 @@ export default {
                 Montserrat_Light: ["Montserrat_Light"],
                 aequitas_regular: ["aequitas_regular"],
                 aequitas_bold: ["aequitas_bold"],
+                merchant_medium: ["merchant_medium"],
+                merchant_regular: ["merchant_regular"],
 
             },
             fontSize: {

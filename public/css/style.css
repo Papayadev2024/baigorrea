@@ -915,3 +915,13 @@ src: url("/fonts/gotham-light.woff") format("woff");
     font-family: "aequitas_bold";
     src: url("/fonts/aequitas_bold.woff") format("woff");
 }
+
+@font-face {
+    font-family: "merchant_medium";
+    src: url("/fonts/merchant_medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "merchant_regular";
+    src: url("/fonts/merchant_regular.woff") format("woff");
+}
