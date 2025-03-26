@@ -20,7 +20,7 @@ class MessageController extends Controller
                             ->where(function($query) {
                                 $query->where('source', '=', 'Inicio')
                                     ->orWhere('source', '=', 'Contacto')
-                                    ->orWhere('source', '=', 'WSP - Tratamiento de Agua')
+                                    ->orWhere('source', '=', 'WSP - Landing')
                                     ->orWhere('source', '=', 'WSP - Productos Químicos');
                             })
                             ->orderBy('created_at', 'DESC')
