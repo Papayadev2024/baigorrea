@@ -197,22 +197,31 @@
                 }
             });
 
+            const form = this;
+
             $.ajax({
                 url: '{{ route('guardarContactoWsp') }}',
                 method: 'POST',
                 data: formDataArray,
                 success: function(response) {
                     Swal.close();
-
                     Swal.fire({
                         title: response.message,
                         icon: "success",
+                    }).then(() => {
+                        // Resetear formulario
+                        form.reset();
+                        
+                        // Crear enlace temporal y hacer clic
+                        const whatsappUrl = `https://api.whatsapp.com/send?phone={{ $general[0]->whatsapp }}&text={{ $general[0]->mensaje_whatsapp }}`;
+                        const link = document.createElement('a');
+                        link.href = whatsappUrl;
+                        link.target = '_blank';
+                        link.rel = 'noopener noreferrer';
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
                     });
-
-                    $('#dataWhatsapp')[0].reset();
-                    window.location.href = 'https://api.whatsapp.com/send?phone={{ $general[0]->whatsapp }}&text={{ $general[0]->mensaje_whatsapp }}';
-                    
-
                 },
                 error: function(error) {
                     Swal.close();
