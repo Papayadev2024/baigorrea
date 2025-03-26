@@ -693,7 +693,7 @@
                                     <div class="swiper-slide">
                                         <div class="bg-[#FFFFFF] relative p-5 lg:p-8 gap-3 flex flex-col rounded-xl h-auto">
                                             <div>
-                                                <p class="text-[#1B4146] text-base lg:text-[17px] 2xl:text-xl font-Montserrat_Regular line-clamp-5">
+                                                <p class="text-[#1B4146] text-base lg:text-[17px] 2xl:text-xl font-Montserrat_Regular">
                                                     {{$testimony->testimonie}}
                                                 </p>
                                             </div>
