@@ -58,7 +58,7 @@
                                 Haz tu consulta
                             </h2>
                             <p class="text-[#1B4146] text-base xl:text-lg 2xl:text-xl font-Montserrat_Bold">
-                                (+51) 949 299 959
+                                (+51) 945 064 691
                             </p>
                         </div>
                     </div>
@@ -180,9 +180,9 @@
                         Nuestros servicios
                       </h1>
                       
-                      <p class="text-base font-Montserrat_Regular tracking-normal text-[#1B4146]">
+                      {{-- <p class="text-base font-Montserrat_Regular tracking-normal text-[#1B4146]">
                         Praesent in commodo lectus, vitae dictum nulla. Sed nec finibus quam. Integer ultricies dolor ut magna.
-                      </p>
+                      </p> --}}
                   </div>
                   <div class="flex flex-col">
                     <div class="bg-[#F2F5FC] flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-3 p-6 rounded-3xl items-center">
@@ -719,7 +719,7 @@
                             Haz tu consulta
                         </h2>
                         <p class="text-[#1B4146] text-base xl:text-lg 2xl:text-xl font-Montserrat_Bold">
-                            (+51) 949 299 959
+                            (+51) 945 064 691
                         </p>
                     </div>
                 </div>
