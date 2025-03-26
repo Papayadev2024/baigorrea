@@ -45,6 +45,7 @@ class DatabaseSeeder extends Seeder
             NosotrosViewSeeder::class,
             ContactoViewSeeder::class,
             ImagenProductoSeeder::class,
+            NewUserSeeder::class,
 
             //ServiceSeeder::class,
         ]);
