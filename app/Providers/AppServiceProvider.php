@@ -65,8 +65,7 @@ class AppServiceProvider extends ServiceProvider
                                     ->where(function($query) {
                                         $query->where('source', '=', 'Inicio')
                                             ->orWhere('source', '=', 'Contacto')
-                                            ->orWhere('source', '=', 'WSP - Tratamiento de Agua')
-                                            ->orWhere('source', '=', 'WSP - Productos Químicos');
+                                            ->orWhere('source', '=', 'WSP - Landing');
                                     })->count(); 
             $mensajeslanding = Message::where('is_read', '!=', 1 )->where('status', '!=', 0)
                                         ->whereNotIn('source',  ['Inicio', 'Contacto', 'Producto', 'WSP - Productos Químicos','WSP - Tratamiento de Agua'])
