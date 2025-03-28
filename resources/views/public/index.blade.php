@@ -35,7 +35,7 @@
         
        
         <section id="bannerprincipal">
-            <div class="flex flex-col gap-10 w-full px-[5%] pt-10 md:pt-20 bg-white overflow-hidden">
+            <div class="flex flex-col gap-10 w-full px-[5%] pt-10 md:pt-16 bg-white overflow-hidden">
                 
                 <div class="grid grid-cols-2 lg:grid-cols-5 gap-5 lg:gap-0">
                     <div class="col-span-2 flex flex-col justify-between pb-0 lg:pb-10">
@@ -67,7 +67,7 @@
                         <div class="relative w-[700px]" data-aos="fade-down">
                             <img class="h-80 md:h-[300px] w-auto object-contain object-left absolute right-20 4xs:left-0 bottom-0" src="{{asset('images/img/texturaAP.png')}}"
                                 onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            <img class="h-96 md:h-[550px] w-full object-contain  object-center relative z-10" src="{{asset('images/img/AdrianaPezo.png')}}"
+                            <img class="h-96 md:h-[650px] w-full object-contain  object-center relative z-10" src="{{asset('images/img/Dra.png')}}"
                                 onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
                         </div>
                     </div>
