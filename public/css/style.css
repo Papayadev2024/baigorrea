@@ -925,3 +925,28 @@ src: url("/fonts/gotham-light.woff") format("woff");
     font-family: "merchant_regular";
     src: url("/fonts/merchant_regular.woff") format("woff");
 }
+
+@font-face {
+    font-family: "tt_hoves_extrabold";
+    src: url("/fonts/tt_hoves_extrabold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "tt_hoves_bold";
+    src: url("/fonts/tt_hoves_bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "tt_hoves_black";
+    src: url("/fonts/tt_hoves_black.woff") format("woff");
+}
+
+@font-face {
+    font-family: "aceh";
+    src: url("/fonts/aceh.woff") format("woff");
+}
+
+@font-face {
+    font-family: "tt_hoves_medium";
+    src: url("/fonts/tt_hoves_medium.woff") format("woff");
+}

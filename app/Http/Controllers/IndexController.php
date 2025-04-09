@@ -59,6 +59,7 @@ use Intervention\Image\ImageManager;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 
+
 use function PHPUnit\Framework\isNull;
 
 class IndexController extends Controller
@@ -69,7 +70,7 @@ class IndexController extends Controller
     public function index()
     {
         // $productos = Products::all();
-        
+       
         $categorias = Category::all();
         $textoshome = HomeView::first();
         $destacados = Products::where('destacar', '=', 1)->where('status', '=', 1)->where('visible', '=', 1)->with('tags')->with('images')->get();
@@ -117,8 +118,21 @@ class IndexController extends Controller
         
         $contactos = ContactDetail::where('status', '=', 1)->get();
         $posts = Blog::where('status', '=', 1)->where('visible', '=', 1)->orderBy('created_at', 'desc')->take(3)->get();
-
-        return view('public.index', compact('ultimoProducto','restopromociones','textoshome', 'productos', 'destacados', 'promociones', 'general', 'benefit', 'faqs', 'testimonie', 'slider', 'categorias', 'category', 'complementos', 'posts','zonas', 'estadisticas', 'contactos'));
+     
+        try {
+          $json = file_get_contents(public_path('phone/countries_phone.json'));
+          $paises = json_decode($json, true);
+          if (json_last_error() !== JSON_ERROR_NONE) {
+              throw new \Exception('Error al decodificar JSON');
+          }
+          usort($paises, function($a, $b) {
+              return strcmp($a['nameES'], $b['nameES']);
+          });
+        } catch (\Exception $e) {
+            $paises = [];
+        }
+        
+        return view('public.index', compact('paises','ultimoProducto','restopromociones','textoshome', 'productos', 'destacados', 'promociones', 'general', 'benefit', 'faqs', 'testimonie', 'slider', 'categorias', 'category', 'complementos', 'posts','zonas', 'estadisticas', 'contactos'));
     }
 
     public function coleccion($filtro)
@@ -839,16 +853,16 @@ class IndexController extends Controller
         try {
             $reglasValidacion = [
                 'full_name' => 'required|string|max:255',
-                'email' => 'required|email|max:255',
+                //'email' => 'required|email|max:255',
             ];
             $mensajes = [
                 'full_name.required' => 'El campo nombre es obligatorio.',
-                'email.required' => 'El campo correo electrónico es obligatorio.',
-                'email.email' => 'El formato del correo electrónico no es válido.',
-                'email.max' => 'El campo correo electrónico no puede tener más de :max caracteres.',
+                // 'email.required' => 'El campo correo electrónico es obligatorio.',
+                // 'email.email' => 'El formato del correo electrónico no es válido.',
+                // 'email.max' => 'El campo correo electrónico no puede tener más de :max caracteres.',
             ];
-            $request->validate($reglasValidacion, $mensajes);
 
+            $request->validate($reglasValidacion, $mensajes);
 
             if (!is_null($ipAddress)) {
               $data['ip'] = $ipAddress;
@@ -885,11 +899,9 @@ class IndexController extends Controller
               $data['device'] = 'Sin data';
             }
 
-           
-
             $dataform = Message::create($data);
             $this->envioCorreoAdmin($dataform);
-            $this->envioCorreoCliente($dataform);
+            // $this->envioCorreoCliente($dataform);
 
             return response()->json(['message' => 'Mensaje enviado con exito']);
         } catch (ValidationException $e) {

@@ -1,16 +1,27 @@
-<header id="main-header" class="sticky top-0 w-full z-40 bg-colorBackgroundHeader">
+<header id="main-header" class="sticky top-0 w-full z-40 bg-white">
 
     <div class="left-0 right-0">
         {{-- Navbar --}}
         <div class="flex justify-between w-full px-[5%]">
-            <nav class="flex h-[80px] 2xl:h-[100px] items-center justify-between gap-10 w-full">
-                <div class="flex justify-center items-center z-40 mx-auto">
+            <nav class="flex h-[70px] 2xl:h-[85px] items-center justify-center lg:justify-between gap-10 w-full">
+                <div class="flex justify-center items-center z-40">
                     <a href="{{ url('/') }}">
                         <img
-                            src="{{ asset('images/svg/logoadrianafinal.svg') }}"
+                            src="{{ asset('images/svg/logobaigorrea.svg') }}"
                             alt="Adriana Pezo"
-                            class="max-w-80 w-full 2xl:max-w-96 2xl:w-[400px]"
+                            class="w-full min-w-40 2xl:max-w-60 2xl:min-w-52"
                         />
+                    </a>
+                </div>
+                <div class="hidden lg:flex flex-row gap-5 text-sm 2xl:text-xl font-tt_hoves_medium font-bold">
+                    <a id="paracaspr" class="cursor-pointer uppercase text-[#013250] h-8 hover:border-b-3 py-1 hover:border-[#EB6C2D]">
+                      PROYECTO PARACAS
+                    </a>
+                    <a id="vellavistapr" class="cursor-pointer uppercase text-[#013250] h-8 hover:border-b-3 py-1 hover:border-[#EB6C2D]">
+                      PROYECTO VELLA VISTA
+                    </a>
+                    <a id="canetepr" class="cursor-pointer uppercase text-[#013250] h-8 hover:border-b-3 py-1 hover:border-[#EB6C2D]">
+                      PROYECTO CAÑETE
                     </a>
                 </div>
             </nav>

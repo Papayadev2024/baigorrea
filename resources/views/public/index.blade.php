@@ -2,30 +2,77 @@
 @section('titulo', 'Inicio')
 @section('css_importados')
     <style>
-        .swiper-testimonios .swiper-pagination-bullet {
+        .swiper-pagination-testimonios .swiper-pagination-bullet {
             width: 14px;
             height: 8px;
             border-radius: 6px;
-            background-color: #052F4E !important;
+            background-color: #FFFFFF !important;
         
         }
 
-        .swiper-testimonios .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
-            background-color: #05304e56!important;
+        .swiper-pagination-testimonios .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+            background-color: #05304e81!important;
             opacity: 1;
         }
+        .select2-container--default .select2-selection--single {
+            border: 1px solid #F9D1AF !important;
+            border-radius: 0.5rem !important;
+            height: auto !important;
+            padding: 0.5rem 0.75rem !important;
+            background-color: #FDFDFD !important;
+        }
 
-        .swiper-servicios .swiper-pagination-bullet {
-            width: 14px;
-            height: 8px;
-            border-radius: 6px;
-            background-color: #052F4E !important;
+        /* Estilo cuando está enfocado */
+        .select2-container--default.select2-container--focus .select2-selection--single {
+            border-color: #EB6C2D !important;
+            outline: 0 !important;
+            box-shadow: none !important;
+        }
+
+        /* Estilo del texto */
+        .select2-container--default .select2-selection--single .select2-selection__rendered {
+            color: #013250 !important;
+            font-family: 'Aceh', sans-serif !important;
+            font-size: 1rem !important;
+            line-height: 1.5 !important;
+            padding: 0 !important;
+        }
+
+        /* Para pantallas grandes */
+        @media (min-width: 1536px) {
+            .select2-container--default .select2-selection--single .select2-selection__rendered {
+                font-size: 1.25rem !important;
+            }
+        }
+
+        /* Estilo de la flecha desplegable */
+        .select2-container--default .select2-selection--single .select2-selection__arrow {
+            height: 100% !important;
+        }
+
+        .select2-search__field{
+            border-color: #EB6C2D !important;
+            outline: 0 !important;
+            box-shadow: none !important;
+        }
+
+        .select2-results__message{
+            font-size: 12px !important;
+        }
+
+        /* Estilos para select banderas */
+        .js-phone-select + .select2-container--default .select2-selection--single {
+            border: 1px solid #F9D1AF !important;
+            border-radius: 0.5rem 0 0 0.5rem !important; /* Solo redondeo izquierdo */
+            height: auto !important;
+            padding: 0.5rem 0.75rem !important;
+            background-color: #FDFDFD !important;
+            transition: border-color 0.3s ease;
+            
+        }
         
-        }
-
-        .swiper-servicios .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
-            background-color: #05304e56!important;
-            opacity: 1;
+        .js-phone-select + .select2-container {
+            max-width: 100px!important;
         }
     </style>
 @stop
@@ -33,91 +80,160 @@
     
     <main>
         
-       
-        <section id="bannerprincipal">
-            <div class="flex flex-col gap-10 w-full px-[5%] pt-10 md:pt-16 bg-white overflow-hidden">
+        {{-- style="background-image: url('{{ asset('images/img/bannerfinal.png') }}')" --}}
+        <section id="bannerprincipal" class="bg-cover relative" >
+            <iframe class="w-full h-full absolute" src="https://www.youtube.com/embed/5GvpNRNPJbs?autoplay=1&mute=1&enablejsapi=1&loop=1&controls=0&disablekb=1&fs=0&modestbranding=1&rel=0&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="absolute inset-0 bg-[#0057B8] bg-opacity-80"></div>
+            <div class="flex flex-col gap-10 w-full pr-[5%] sm:px-[5%] bg-[#0057B8] bg-opacity-80">
                 
-                <div class="grid grid-cols-2 lg:grid-cols-5 gap-5 lg:gap-0">
-                    <div class="col-span-2 flex flex-col justify-between pb-0 lg:pb-10">
-                        <div class="flex flex-col p-2 justify-center items-start gap-8">
-                            <h2 class="text-[#09262A] font-merchant_medium text-5xl xl:text-6xl 2xl:text-7xl leading-[45px] xl:leading-[55px] tracking-tighter" data-aos="fade-down">Acompañamos el bienestar emocional y conductual de tu hijo</h2>
-                            
-                            <h2 class="text-[#1B4146] text-base xl:text-lg 2xl:text-xl font-Montserrat_Regular" data-aos="fade-down">
-                                Sabemos lo importante que es el bienestar emocional de los niños y adolescentes. Estamos aquí para escucharte y brindarte el apoyo que necesitas con empatía y profesionalismo.
-                            </h2>
-
-                            <div class="flex flex-row justify-start items-start" data-aos="fade-down">
-                                <a href="#productoscarrusel" id="scrollButton" 
-                                    class=" text-white py-3 px-6 bg-[#B380B5] rounded-3xl text-base 2xl:text-lg font-Montserrat_SemiBold text-center max-w-xs">
-                                    Nuestros servicios
-                                </a>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+                    
+                    <div class="lg:col-span-2 flex flex-col sm:-space-y-10 pt-10 md:pt-16">
+                        <div class="flex flex-col justify-center items-start gap-8 px-[5%] sm:px-0">
+                            <h2 class="text-white mx-auto lg:mx-0 text-left sm:text-center lg:text-left max-w-2xl 2xl:max-w-3xl font-tt_hoves_bold uppercase text-4xl sm:text-5xl xl:text-[64px] leading-tight lg:!leading-[65px] tracking-tighter" data-aos="fade-down">Tu terreno en pisco al alcance de tu <span class="text-[#E1DE18]">bolsillo</span></h2>
+                        </div>
+                       
+                        <div class="flex flex-col justify-end items-start relative order-2 lg:order-1">
+                            <div class="relative mx-auto lg:mx-0" data-aos="fade-down">
+                                <img class="w-full h-[300px] sm:h-[400px] xl:h-[500px] 2xl:h-[600px]  -mb-7 z-10 object-cover sm:object-contain object-right sm:object-center" src="{{asset('images/img/imagenportada.png')}}"
+                                    onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
                             </div>
                         </div>
-                        <div class="flex flex-col p-2 justify-center items-start" data-aos="fade-down">
-                            <h2 class="text-[#1B4146] text-base xl:text-lg 2xl:text-xl font-Montserrat_Regular">
-                                Haz tu consulta
-                            </h2>
-                            <p class="text-[#1B4146] text-base xl:text-lg 2xl:text-xl font-Montserrat_Bold">
-                                (+51) 945 064 691
-                            </p>
-                        </div>
                     </div>
     
-                    <div class="col-span-2 flex flex-col justify-end items-center relative order-2 lg:order-1 ">
-                        <div class="relative w-[700px]" data-aos="fade-down">
-                            <img class="h-80 md:h-[300px] w-auto object-contain object-left absolute right-20 4xs:left-0 bottom-0" src="{{asset('images/img/texturaAP.png')}}"
-                                onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            <img class="h-96 md:h-[650px] w-full object-contain  object-center relative z-10" src="{{asset('images/img/Dra.png')}}"
-                                onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                        </div>
-                    </div>
-    
-                    <div class="col-span-2 lg:col-span-1 flex flex-col sm:flex-row gap-5 sm:gap-10 lg:flex-col justify-around items-start lg:items-end order-1 lg:order-2">
+                    <div class="lg:col-span-1 flex flex-col sm:flex-row gap-5 sm:gap-10 lg:flex-col justify-around items-start lg:items-center order-1 lg:order-2 2xl:py-12">
                         
-                        <div class="grid grid-cols-1 gap-2 xl:gap-4 z-20 min-w-[320px] xl:w-[340px] 2xl:w-[400px] 3xl:w-[450px] max-w-[600px] animate-jump-out animate-once animate-duration-[2000ms] animate-reverse">
-                            <div id="form-1" class="bg-[#F2F5FC] p-6 2xl:p-8 rounded-3xl flex flex-col gap-4">
-                                <h2 class="text-[#1B4146] text-base sm:text-lg 2xl:text-xl font-Montserrat_SemiBold">
-                                    Solicita información ahora vía WhatsApp
-                                </h2>
-                                <form class="space-y-2 4xs:space-y-4 2xl:space-y-4" id="dataWhatsapp">
+                        <div class="hidden lg:grid grid-cols-1 gap-2 xl:gap-4 z-20 min-w-[390px] xl:w-[450px] 2xl:w-[550px] 3xl:w-[550px] max-w-[600px] animate-jump-out animate-once animate-duration-[2000ms] animate-reverse">
+                            <div id="form1" class="bg-[#FDFDFD] p-4 xl:p-6 2xl:p-8 rounded-2xl flex flex-col gap-4">
+                                <form class="flex flex-col gap-2 xl:gap-4" id="formContactos">
                                   @csrf
-                                  <input type="text" name="full_name" placeholder="Nombre Completo" 
-                                      class="border-green-500 border-0  focus:!border-0 focus:!ring-0 focus:!ring-transparent
-                                      placeholder:text-[#AAC3E6] text-[#97adcb] font-Montserrat_Regular w-full py-3 px-2 rounded-3xl text-base 2xl:text-xl  placeholder-opacity-25 font-light  bg-white">
-                        
-                                  <input type="email" name="email" 
+                                    <div class="relative">
+                                        <input type="text" name="full_name" id="full_name" placeholder=" " 
+                                            class="peer border-[#F9D1AF] focus:border-[#EB6C2D] focus:ring-0 font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
+                                        <label for="full_name" class="text-[#013250] absolute left-2 top-2 peer-focus:-top-3 peer-[:not(:placeholder-shown)]:-top-3 transition-all peer-focus:text-sm peer-[:not(:placeholder-shown)]:text-sm peer-focus:bg-white peer-[:not(:placeholder-shown)]:bg-white peer-focus:px-1 peer-[:not(:placeholder-shown)]:px-1 font-aceh 2xl:text-xl peer-focus:2xl:text-lg peer-[:not(:placeholder-shown)]:2xl:text-lg">Nombres y Apellidos</label>
+                                    </div>
+                                    
+                                    <div class="relative">
+                                            <select type="text" name="proyecto" id="proyecto" placeholder=" " 
+                                                class="customselect peer border-[#F9D1AF] focus:border-[#EB6C2D] focus:ring-0 font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
+                                                <option value="Proyecto Paracas">Proyecto Paracas</option>
+                                                <option value="Proyecto Villa Vista">Proyecto Villa Vista</option>
+                                                <option value="Proyecto Cañete">Proyecto Cañete</option>
+                                            </select>
+                                    </div>
+                                    
+                                    <div class="flex flex-row">
+                                        <select class="js-phone-select !max-w-[120px]" name="phone">
+                                            @foreach($paises as $pais)
+                                                <option value="{{ $pais['iso2'] }}" 
+                                                        data-phone-code="+{{ $pais['phoneCode'] }}">
+                                                    {{ $pais['nameES'] }}
+                                                </option>
+                                            @endforeach
+                                        </select>
+                                        <div class="relative w-full">
+                                            <input type="text" name="phone" id="telefonoContacto" placeholder=" " 
+                                                class="peer border-[#F9D1AF] focus:border-[#EB6C2D] focus:ring-0 font-aceh w-full py-2 px-3 rounded-lg rounded-l-none border-l-transparent text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
+                                            <label for="telefonoContacto" class="text-[#013250] absolute left-2 top-2 peer-focus:-top-3 peer-[:not(:placeholder-shown)]:-top-3 transition-all peer-focus:text-sm peer-[:not(:placeholder-shown)]:text-sm peer-focus:bg-white peer-[:not(:placeholder-shown)]:bg-white peer-focus:px-1 peer-[:not(:placeholder-shown)]:px-1 font-aceh 2xl:text-xl peer-focus:2xl:text-lg peer-[:not(:placeholder-shown)]:2xl:text-lg">Celular</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-4 gap-3">
+                                        <label for="message" class="col-span-4 -mb-2 text-[#013250] font-aceh text-base 2xl:text-xl">¿Cuenta con una inicial?<span class="text-[#EB6C2D]">*</span></label>
+
+                                        <div class="flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
+                                            <input id="input1" type="radio" name="monto" value="no" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                            <label for="input1">No</label>
+                                        </div>
+
+                                        <div class="flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
+                                            <input id="input2" type="radio" name="monto" value="1480" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                            <label for="input2">S/1,480</label>
+                                        </div>
+
+                                        <div class="flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
+                                            <input id="input3" type="radio" name="monto" value="2000" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                            <label for="input3">S/2,000</label>
+                                        </div>
+
+                                        <div class="flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
+                                            <input id="input4" type="radio" name="monto" value="2400" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                            <label for="input4">S/2,400</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid grid-cols-4 gap-3">
+                                        <label for="message" class="col-span-4 -mb-2 text-[#013250] font-aceh text-base 2xl:text-xl">La cuota mensual que puedo pagar es de<span class="text-[#EB6C2D]">*</span></label>
+
+                                        <div class="flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
+                                            <input id="inputcuota1" type="radio" name="cuota" value="no" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                            <label for="inputcuota1">S/300</label>
+                                        </div>
+
+                                        <div class="flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
+                                            <input id="inputcuota2" type="radio" name="cuota" value="1480" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                            <label for="inputcuota2">S/400</label>
+                                        </div>
+
+                                        <div class="flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
+                                            <input id="inputcuota3" type="radio" name="cuota" value="2000" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                            <label for="inputcuota3">S/500</label>
+                                        </div>
+
+                                        <div class="flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
+                                            <input id="inputcuota4" type="radio" name="cuota" value="2400" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                            <label for="inputcuota4">S/600</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="relative mt-3">
+                                        <input type="date" name="full_name" id="full_name" placeholder=" " 
+                                            class="peer border-[#F9D1AF] focus:border-[#EB6C2D] focus:ring-0 font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
+                                        <label for="full_name" class="text-[#013250] absolute left-2 top-2 peer-focus:-top-3 peer-[:not(:placeholder-shown)]:-top-3 transition-all peer-focus:text-sm peer-[:not(:placeholder-shown)]:text-sm peer-focus:bg-white peer-[:not(:placeholder-shown)]:bg-white peer-focus:px-1 peer-[:not(:placeholder-shown)]:px-1 font-aceh 2xl:text-xl peer-focus:2xl:text-lg peer-[:not(:placeholder-shown)]:2xl:text-lg">¿Tienes una fecha aproximada de compra?</label>
+                                    </div>
+                                    
+
+                                    
+                                    {{-- <input type="email" name="email" 
                                       placeholder="Correo Electrónico"
                                       class="border-green-500 border-0 focus:!border-0 focus:!ring-0 focus:!ring-transparent
-                                      placeholder:text-[#AAC3E6] text-[#97adcb] font-Montserrat_Regular w-full py-3 px-2 rounded-3xl text-base 2xl:text-xl  placeholder-opacity-25 font-light  bg-white">
+                                      placeholder:text-[#AAC3E6] text-[#97adcb] font-Montserrat_Regular w-full py-3 px-2 rounded-3xl text-base 2xl:text-xl  placeholder-opacity-25 font-light  bg-white"> --}}
                         
-                                  <input type="text" name="phone" placeholder="Teléfono"
-                                      class="border-green-500 border-0 focus:!border-0 focus:!ring-0 focus:!ring-transparent
-                                      placeholder:text-[#AAC3E6] text-[#97adcb] font-Montserrat_Regular w-full py-3 px-2 rounded-3xl text-base 2xl:text-xl  placeholder-opacity-25 font-light  bg-white">
-                                  
+                              
                                   <input type="hidden" name="client_width" id="anchodispositivo">
                                   <input type="hidden" name="client_height" id="largodispositivo">
                                   <input type="hidden" name="client_latitude" id="latitud">
                                   <input type="hidden" name="client_longitude" id="longitud">
                                   <input type="hidden" name="client_system" id="sistema">
-                                  <input type="hidden" id="tipo" placeholder="tipo" name="source" value="WSP - Landing" />
+                                  <input type="hidden" id="tipo" placeholder="tipo" name="source" value="Inicio" />
                                      
-                        
-                                  <button type="submit"
-                                      class="font-Montserrat_Medium text-white py-3 px-2 bg-[#1E7B82] justify-center items-center rounded-3xl inline-flex text-base 2xl:text-xl w-full">
-                                      <span>Hablar con la Dra. Adriana Pezo</span>
-                                  </button>
+                                   <button type="submit" class="w-full text-white text-center text-lg px-6 py-3 font-aceh rounded-xl bg-gradient-to-r from-[#EB6C2D] to-[#F4B17D] flex flex-row gap-2 justify-center">
+                                        Enviar formulario
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                            <mask id="mask0_2002_48" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+                                            <rect x="0.5" width="24" height="24" fill="white"/>
+                                            </mask>
+                                            <g mask="url(#mask0_2002_48)">
+                                            <path d="M16.675 13.001H4.5V11.001H16.675L11.075 5.40098L12.5 4.00098L20.5 12.001L12.5 20.001L11.075 18.601L16.675 13.001Z" fill="white"/>
+                                            </g>
+                                        </svg>
+                                    </button>
+
+                                    <p class="col-span-4 -mb-2 text-[#013250] font-aceh text-base 2xl:text-xl">Al enviar el formulario estoy aceptando<span class="text-[#EB6C2D]"><a id="linkTerminos2" class="underline"> Términos y Condiciones</a> y <a id="linkPoliticasDatos2" class="underline">Políticas de privacidad</a></span></p>
+
                                 </form>
-                                
+
                             </div>
                         </div>
 
                     </div>
+
                 </div>
 
             </div>
         </section>
 
-        <section  class="w-full items-start px-[5%] py-8 bg-[#6486CD] text-[#252222] bg-cover bg-center" style="background-image: url({{ asset('images/img/textura_beneficios.png') }})">
+        <section  class="w-full items-start px-[5%] py-8 text-[#252222] bg-cover bg-center" style="background-image: url({{ asset('images/img/textura_beneficios.png') }})">
             <div class="grid grid-cols-1" data-aos="fade-down">
                 <div>
                     <div class="swiper beneficios">
@@ -125,13 +241,13 @@
                             
                             <div class="swiper-slide">
                                 <div class="flex flex-col gap-4 items-start min-w-[240px]">
-                                    <div class="bg-white rounded-full w-14 h-14 flex flex-row justify-center items-center">
-                                        <img  class="object-contain w-8" loading="lazy" src="{{asset('images/svg/personas.svg')}}" onerror="this.onerror=null;this.src='{{ asset('images/imagen/noimagen.jpg') }}';"/>
+                                    <div class="rounded-full w-14 h-14 flex flex-row justify-center items-center">
+                                        <img  class="object-contain w-12" loading="lazy" src="{{asset('images/img/energy.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/imagen/noimagen.jpg') }}';"/>
                                     </div>
                                     <div class="flex flex-col text-white">
-                                        <h2 class="text-lg xl:text-xl font-Montserrat_SemiBold !leading-none max-w-xs">Atención personalizada y cercana</h2>
-                                        <p class="mt-2 text-base font-Montserrat_Regular leading-5">
-                                            Evaluación y tratamiento adaptado a cada niño y adolescente.
+                                        <h2 class="uppercase text-xl xl:text-2xl font-tt_hoves_bold !leading-none max-w-xs">obras completas</h2>
+                                        <p class="mt-2 text-lg xl:text-xl font-aceh !leading-tight">
+                                            Contamos con todas las obras completas, amplias pistas asfaltadas, veredas, luz, agua y desagüe.
                                         </p>
                                     </div>
                                 </div>
@@ -139,13 +255,13 @@
 
                             <div class="swiper-slide">
                                 <div class="flex flex-col gap-4 items-start min-w-[240px]">
-                                    <div class="bg-white rounded-full w-14 h-14 flex flex-row justify-center items-center">
-                                        <img  class="object-contain w-8" loading="lazy" src="{{asset('images/svg/manos.svg')}}" onerror="this.onerror=null;this.src='{{ asset('images/imagen/noimagen.jpg') }}';"/>
+                                    <div class=" rounded-full w-14 h-14 flex flex-row justify-center items-center">
+                                        <img  class="object-contain w-12" loading="lazy" src="{{asset('images/img/slide.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/imagen/noimagen.jpg') }}';"/>
                                     </div>
                                     <div class="flex flex-col text-white">
-                                        <h2 class="text-lg xl:text-xl font-Montserrat_SemiBold !leading-none max-w-xs">Atención personalizada y cercana</h2>
-                                        <p class="mt-2 text-base font-Montserrat_Regular leading-5">
-                                            Acompañamiento profesional para fortalecer su bienestar mental.
+                                        <h2 class="uppercase text-xl xl:text-2xl font-tt_hoves_bold !leading-none max-w-xs">ÁREAS RECREATIVAS</h2>
+                                        <p class="mt-2 text-lg xl:text-xl font-aceh !leading-tight">
+                                            Contamos con amplios parques, juegos para niños y cancha deportiva.
                                         </p>
                                     </div>
                                 </div>
@@ -153,13 +269,13 @@
 
                             <div class="swiper-slide">
                                 <div class="flex flex-col gap-4 items-start min-w-[240px]">
-                                    <div class="bg-white rounded-full w-14 h-14 flex flex-row justify-center items-center">
-                                        <img  class="object-contain w-8" loading="lazy" src="{{asset('images/svg/quiz.svg')}}" onerror="this.onerror=null;this.src='{{ asset('images/imagen/noimagen.jpg') }}';"/>
+                                    <div class=" rounded-full w-14 h-14 flex flex-row justify-center items-center">
+                                        <img  class="object-contain w-12" loading="lazy" src="{{asset('images/img/artboard.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/imagen/noimagen.jpg') }}';"/>
                                     </div>
                                     <div class="flex flex-col text-white">
-                                        <h2 class="text-lg xl:text-xl font-Montserrat_SemiBold !leading-none max-w-xs">Atención personalizada y cercana</h2>
-                                        <p class="mt-2 text-base font-Montserrat_Regular leading-5">
-                                            Métodos actualizados en psiquiatría infantil y adolescente.
+                                        <h2 class="uppercase text-xl xl:text-2xl font-tt_hoves_bold tracking-wide !leading-none max-w-xs">Desde 90m2</h2>
+                                        <p class="mt-2 text-lg xl:text-xl font-aceh !leading-tight">
+                                            ¡Nuevo Proyecto! Aprovecha la Pre-Venta. Crédito directo sin bancos.
                                         </p>
                                     </div>
                                 </div>
@@ -171,508 +287,391 @@
             </div>
         </section>
 
-        <section class="px-[5%] py-10 lg:py-20 bg-white" id="productoscarrusel">
-            <div class="flex flex-col gap-8 md:gap-12" >
-                
-                <div data-aos="fade-down" class='flex flex-col lg:flex-row lg:justify-between items-start justify-center gap-5'>
-                  <div class='flex flex-col gap-3 max-w-lg'>
-                      <h1 class="tracking-tighter text-4xl 2xl:text-5xl font-Montserrat_Bold font-bold text-[#09262A] leading-none">
-                        Nuestros servicios
-                      </h1>
-                      
-                      {{-- <p class="text-base font-Montserrat_Regular tracking-normal text-[#1B4146]">
-                        Praesent in commodo lectus, vitae dictum nulla. Sed nec finibus quam. Integer ultricies dolor ut magna.
-                      </p> --}}
-                  </div>
-                  <div class="flex flex-col">
-                    <div class="bg-[#F2F5FC] flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-3 p-6 rounded-3xl items-center">
-                      <p class="text-[#506DC0] text-base lg:text-lg font-Montserrat_SemiBold max-w-[300px]">
-                        Si crees que necesita apoyo,
-                        estoy aquí para ayudarte
-                      </p>
-                      <a target="_blank"  href="https://api.whatsapp.com/send?phone={{ $general[0]->whatsapp }}&text={{ $general[0]->mensaje_whatsapp }}"
-                        class="w-auto bg-[#6486CD] px-6 py-4 rounded-3xl text-white font-Montserrat_Medium">
-                        Hablar con un experto
-                      </a>
-                      
-                    </div>
-                  </div>
+        <section class="px-[5%] pt-10 lg:pt-20 bg-white" id="paracasllegada">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10" >
+                <div class="flex flex-col justify-center">
+                    <img class="w-full h-[300px] sm:h-[400px] lg:h-[500px] 2xl:h-[600px] object-contain object-center" src="{{ asset('images/img/terreno.png') }}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
                 </div>
+                <div class="flex flex-col gap-5 justify-center">
 
-                <div  class="grilla grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-y-5 gap-x-8 hidden sm:grid">
-                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
-                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_1.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
+                    <h2 class="text-[#013250] text-left font-tt_hoves_bold uppercase text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl !leading-tight tracking-wide" data-aos="fade-down">
+                        Vive frente al mar <br> en <span class="text-[#EB6C2D]">Paracas</span></h2>
+                    
+                    <div class="flex">
+                        <div class="grid grid-cols-2 rounded-2xl  border border-[#013250] w-auto">
+                            <div class="flex flex-col border-r border-[#013250] px-4 py-2">
+                                <p class="font-aceh text-[#014568] text-lg">Desde</p>
+                                <h2 class="font-aceh font-bold text-[#013250] text-2xl">S/10,000</h2>
                             </div>
-                        </div>
-                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                            <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Autismo (TEA)</h2>
+                            
+                            <div class="flex flex-col px-4 py-2">
+                                <p class="font-aceh  text-[#014568] text-lg">Cuotas desde</p>
+                                <h2 class="font-aceh font-bold text-[#013250] text-2xl leading-5 sm:!leading-normal">S/360 <span class="text-[#014568] font-normal text-lg">mensuales</span></h2>
                             </div>
-                        </div>
-                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                Agendar cita
-                            </a>
                         </div>
                     </div>
 
-                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
-                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_2.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                            <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">TDAH (trastorno por déficit de atención e hiperactividad)</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                Agendar cita
-                            </a>
-                        </div>
+                    <p class="font-aceh text-[#014568] text-lg 2xl:text-xl">
+                        Despierta con la brisa marina y el sol radiante todo el año. 
+                        Nuestro proyecto en Paracas te ofrece la tranquilidad de la naturaleza 
+                        con el confort de una inversión segura.
+                    </p>
+
+                    <ul class="font-aceh text-[#014568] text-lg 2xl:text-xl">
+                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> A minutos de la reserva natural</li>
+                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Alto potencial de revalorización</li>
+                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Clima cálido todo el año</li>
+                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Financiamiento sin bancos</li>
+                    </ul>
+
+                    <div id="masinfoparacas" class="text-white hidden cursor-pointer lg:flex text-center text-lg px-6 py-3 font-aceh rounded-xl bg-gradient-to-r from-[#004469] to-[#61C0E0] flex-row gap-2 justify-center">
+                        Quiero más información 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                            <mask id="mask0_2002_48" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+                            <rect x="0.5" width="24" height="24" fill="white"/>
+                            </mask>
+                            <g mask="url(#mask0_2002_48)">
+                            <path d="M16.675 13.001H4.5V11.001H16.675L11.075 5.40098L12.5 4.00098L20.5 12.001L12.5 20.001L11.075 18.601L16.675 13.001Z" fill="white"/>
+                            </g>
+                        </svg>
                     </div>
 
-                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
-                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_3.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                            <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Impulsividad, agresividad en niños y adolescentes</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                Agendar cita
-                            </a>
-                        </div>
-                    </div>
-
-                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
-                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_4.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                            <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos de conducta en la infancia y la adolescencia</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                Agendar cita
-                            </a>
-                        </div>
-                    </div>
-
-                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
-                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_5.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                            <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos del estado de ánimo en la infancia y la adolescencia</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                Agendar cita
-                            </a>
-                        </div>
-                    </div>
-
-                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
-                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_6.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                            <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos de ansiedad</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                Agendar cita
-                            </a>
-                        </div>
-                    </div>
-
-                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
-                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_7.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                            <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Transtornos obsesivo compulsivo</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                Agendar cita
-                            </a>
-                        </div>
-                    </div>
-
-                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
-                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_8.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                            <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos de la conducta alimentaria: anorexia, bulimia</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                Agendar cita
-                            </a>
-                        </div>
-                    </div>
-
-                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
-                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_9.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                            <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Transtornos relacionados con traumas y factores de estrés</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                Agendar cita
-                            </a>
-                        </div>
-                    </div>
-
-                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
-                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_10.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                            <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos del sueño-vigilia</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                Agendar cita
-                            </a>
-                        </div>
-                    </div>
-
-                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
-                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_11.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                            <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Depresión en niños y adolescentes</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                Agendar cita
-                            </a>
-                        </div>
-                    </div>
-
-                    <div data-aos="fade-down" class="servicio flex flex-col group relative">
-                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_12.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                            </div>
-                        </div>
-                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                            <div class="flex flex-row w-full justify-center items-center">
-                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos del aprendizaje</h2>
-                            </div>
-                        </div>
-                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                Agendar cita
-                            </a>
-                        </div>
+                    <div id="masinfoparacas2" class="text-white lg:hidden cursor-pointer text-center text-lg px-6 py-3 font-aceh rounded-xl bg-gradient-to-r from-[#004469] to-[#61C0E0] flex flex-row gap-2 justify-center">
+                        Quiero más información 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                            <mask id="mask0_2002_48" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+                            <rect x="0.5" width="24" height="24" fill="white"/>
+                            </mask>
+                            <g mask="url(#mask0_2002_48)">
+                            <path d="M16.675 13.001H4.5V11.001H16.675L11.075 5.40098L12.5 4.00098L20.5 12.001L12.5 20.001L11.075 18.601L16.675 13.001Z" fill="white"/>
+                            </g>
+                        </svg>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="flex sm:hidden">
-                    <div class="w-full" data-aos="fade-down">
-                        <div class="swiper servicios">
-                            <div class="swiper-wrapper">
+        <section class="px-[5%] pt-10 lg:pt-20 bg-white" id="villallegada">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10" >
+                <div class="flex flex-col lg:order-2 justify-center">
+                    <img class="w-full h-[300px] sm:h-[400px] lg:h-[500px] 2xl:h-[600px] object-contain object-center" src="{{ asset('images/img/terreno.png') }}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
+                </div>
+                <div class="flex flex-col gap-5 justify-center">
 
-                                <div class="swiper-slide">
-                                    <div class="servicio flex flex-col group relative">
-                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_1.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                                            <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Autismo (TEA)</h2>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                                Agendar cita
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="servicio flex flex-col group relative">
-                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_2.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                                            <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">TDAH (trastorno por déficit de atención e hiperactividad)</h2>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                                Agendar cita
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="servicio flex flex-col group relative">
-                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_3.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                                            <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Impulsividad, agresividad en niños y adolescentes</h2>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                                Agendar cita
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="servicio flex flex-col group relative">
-                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_4.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                                            <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos de conducta en la infancia y la adolescencia</h2>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                                Agendar cita
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="servicio flex flex-col group relative">
-                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_5.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                                            <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos del estado de ánimo en la infancia y la adolescencia</h2>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                                Agendar cita
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="servicio flex flex-col group relative">
-                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_6.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                                            <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos de ansiedad</h2>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                                Agendar cita
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="servicio flex flex-col group relative">
-                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_7.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                                            <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Transtornos obsesivo compulsivo</h2>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                                Agendar cita
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="servicio flex flex-col group relative">
-                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_8.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                                            <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos de la conducta alimentaria: anorexia, bulimia</h2>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                                Agendar cita
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="servicio flex flex-col group relative">
-                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_9.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                                            <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Transtornos relacionados con traumas y factores de estrés</h2>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                                Agendar cita
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="servicio flex flex-col group relative">
-                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_10.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                                            <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos del sueño-vigilia</h2>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                                Agendar cita
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="servicio flex flex-col group relative">
-                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_11.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                                            <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Depresión en niños y adolescentes</h2>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                                Agendar cita
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper-slide">
-                                    <div class="servicio flex flex-col group relative">
-                                        <div class="bg-[#F2F5F7] rounded-2xl flex flex-row">
-                                            <div class="max-w-full flex flex-col items-center justify-center w-full">
-                                                <img class="w-full h-full object-contain object-bottom "  src="{{ asset('images/img/servicio_12.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-col justify-center items-center gap-1 mt-3">
-                                            <div class="flex flex-row w-full justify-center items-center">
-                                                <h2 class="font-Montserrat_SemiBold text-center text-[#09262A] leading-none text-base xl:text-lg 2xl:text-xl nombreServicio">Trastornos del aprendizaje</h2>
-                                            </div>
-                                        </div>
-                                        <div class="flex flex-row gap-1 mt-2 inset-0 items-end justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                            <a target="_blank" class="text-white cursor-pointer text-sm md:text-base py-2 px-6 w-full max-w-[200px] bg-[#1E7B82] rounded-2xl font-Montserrat_Medium text-center">
-                                                Agendar cita
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                    <h2 class="text-[#013250] text-left font-tt_hoves_bold uppercase text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl !leading-tight tracking-wide" data-aos="fade-down">
+                        Escápate a tu Refugio <br> en <span class="text-[#EB6C2D]">villa vista</span></h2>
+                    
+                    <div class="flex">
+                        <div class="grid grid-cols-2 rounded-2xl  border border-[#013250] w-auto">
+                            <div class="flex flex-col border-r border-[#013250] px-4 py-2">
+                                <p class="font-aceh text-[#014568] text-lg">Desde</p>
+                                <h2 class="font-aceh font-bold text-[#013250] text-2xl">S/10,000</h2>
                             </div>
-                            <div class="flex flex-row justify-start ml-10">
-                                <div class="swiper-servicios !flex justify-center py-3 mt-3 "></div>
+                            
+                            <div class="flex flex-col px-4 py-2">
+                                <p class="font-aceh  text-[#014568] text-lg">Cuotas desde</p>
+                                <h2 class="font-aceh font-bold text-[#013250] text-2xl leading-5 sm:!leading-normal">S/360 <span class="text-[#014568] font-normal text-lg">mensuales</span></h2>
                             </div>
                         </div>
                     </div>
-                </div>
 
+                    <p class="font-aceh text-[#014568] text-lg 2xl:text-xl">
+                        Tu lugar ideal para disfrutar del verano y el descanso. 
+                        Este proyecto te da acceso exclusivo a un club privado y 
+                        espacios diseñados para el confort.
+                    </p>
+
+                    <ul class="font-aceh text-[#014568] text-lg 2xl:text-xl">
+                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Ubicación privilegiada cerca del mar</li>
+                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Financiamiento sin bancos</li>
+                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Seguridad 24/7 y áreas recreativas</li>
+                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Opción de financiamiento directo</li>
+                    </ul>
+
+                    <div id="masinfovilla" class="text-white cursor-pointer hidden lg:flex text-center text-lg px-6 py-3 font-aceh rounded-xl bg-gradient-to-r from-[#004469] to-[#61C0E0]  flex-row gap-2 justify-center">
+                        Quiero más información 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                            <mask id="mask0_2002_48" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+                            <rect x="0.5" width="24" height="24" fill="white"/>
+                            </mask>
+                            <g mask="url(#mask0_2002_48)">
+                            <path d="M16.675 13.001H4.5V11.001H16.675L11.075 5.40098L12.5 4.00098L20.5 12.001L12.5 20.001L11.075 18.601L16.675 13.001Z" fill="white"/>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div id="masinfovilla2" class="text-white cursor-pointer text-center flex lg:hidden text-lg px-6 py-3 font-aceh rounded-xl bg-gradient-to-r from-[#004469] to-[#61C0E0]  flex-row gap-2 justify-center">
+                        Quiero más información 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                            <mask id="mask0_2002_48" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+                            <rect x="0.5" width="24" height="24" fill="white"/>
+                            </mask>
+                            <g mask="url(#mask0_2002_48)">
+                            <path d="M16.675 13.001H4.5V11.001H16.675L11.075 5.40098L12.5 4.00098L20.5 12.001L12.5 20.001L11.075 18.601L16.675 13.001Z" fill="white"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="px-[5%] py-10 lg:py-20 bg-white" id="canetellegada">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10" >
+                <div class="flex flex-col justify-center">
+                    <img class="w-full h-[300px] sm:h-[400px] lg:h-[500px] 2xl:h-[600px] object-contain object-center" src="{{ asset('images/img/terreno.png') }}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
+                </div>
+                <div class="flex flex-col gap-5 justify-center">
+
+                    <h2 class="text-[#013250] text-left font-tt_hoves_bold uppercase text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl !leading-tight tracking-wide" data-aos="fade-down">
+                        Naturaleza y Conectividad <br><span class="text-[#EB6C2D]">en Cañete</span></h2>
+                    
+                    <div class="flex">
+                        <div class="grid grid-cols-2 rounded-2xl  border border-[#013250] w-auto">
+                            <div class="flex flex-col border-r border-[#013250] px-4 py-2">
+                                <p class="font-aceh text-[#014568] text-lg">Desde</p>
+                                <h2 class="font-aceh font-bold text-[#013250] text-2xl">S/10,000</h2>
+                            </div>
+                            
+                            <div class="flex flex-col px-4 py-2">
+                                <p class="font-aceh  text-[#014568] text-lg">Cuotas desde</p>
+                                <h2 class="font-aceh font-bold text-[#013250] text-2xl leading-5 sm:!leading-normal">S/360 <span class="text-[#014568] font-normal text-lg">mensuales</span></h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="font-aceh text-[#014568] text-lg 2xl:text-xl">
+                        Equilibrio perfecto entre ciudad y naturaleza. 
+                        Vive rodeado de áreas verdes con una inversión inteligente 
+                        en una zona en crecimiento.
+                    </p>
+
+                    <ul class="font-aceh text-[#014568] text-lg 2xl:text-xl">
+                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Gran conectividad con la ciudad</li>
+                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Seguridad y tranquilidad aseguradas</li>
+                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Espacios diseñados para el bienestar</li>
+                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Financiamiento sin bancos</li>
+                    </ul>
+
+                    <div id="masinfocanete" class="text-white cursor-pointer text-center hidden lg:flex text-lg px-6 py-3 font-aceh rounded-xl bg-gradient-to-r from-[#004469] to-[#61C0E0] flex-row gap-2 justify-center">
+                        Descubre más
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                            <mask id="mask0_2002_48" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+                            <rect x="0.5" width="24" height="24" fill="white"/>
+                            </mask>
+                            <g mask="url(#mask0_2002_48)">
+                            <path d="M16.675 13.001H4.5V11.001H16.675L11.075 5.40098L12.5 4.00098L20.5 12.001L12.5 20.001L11.075 18.601L16.675 13.001Z" fill="white"/>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div id="masinfocanete2" class="text-white cursor-pointer text-center flex lg:hidden text-lg px-6 py-3 font-aceh rounded-xl bg-gradient-to-r from-[#004469] to-[#61C0E0] flex-row gap-2 justify-center">
+                        Descubre más
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                            <mask id="mask0_2002_48" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+                            <rect x="0.5" width="24" height="24" fill="white"/>
+                            </mask>
+                            <g mask="url(#mask0_2002_48)">
+                            <path d="M16.675 13.001H4.5V11.001H16.675L11.075 5.40098L12.5 4.00098L20.5 12.001L12.5 20.001L11.075 18.601L16.675 13.001Z" fill="white"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
             </div>
         </section>
         
-        @if ($testimonie->count() > 0)
+
+        <section class="px-[5%]" style="background-image: url({{ asset('images/img/textura_final.png') }})">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-10 pb-10 lg:pb-0" >
+                <div class="lg:col-span-7 flex flex-col justify-start pt-10 pb-4 lg:py-10 gap-3 lg:gap-8">
+                    <h2 class="text-white text-left font-tt_hoves_bold uppercase text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl !leading-tight tracking-wide" data-aos="fade-down">
+                        <span class="text-[#E0DE1D]">Historias</span> de quienes ya eligieron su terreno en Cañete
+                    </h2>
+                    <div>
+                        <div class="swiper testimonios flex flex-row w-full">
+                           <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="grid grid-cols-1 2xl:max-w-2xl">
+                                        <div class="flex flex-col justify-center items-center">
+                                          <div class="w-full h-[380px] rounded-xl overflow-hidden relative bg-cover bg-center" style="background-image: url('https://i.ytimg.com/vi/ywwtO7MZUzk/hq720.jpg');">
+                                            <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo(this)">
+                                              <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/img/iconof.png') }}" /></button>
+                                            </div>
+                                            <iframe id="videoIframe" class="videoIframe w-full h-full hidden" src="https://www.youtube.com/embed/ywwtO7MZUzk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="grid grid-cols-1 2xl:max-w-2xl">
+                                        <div class="flex flex-col justify-center items-center">
+                                          <div class="w-full h-[380px] rounded-xl overflow-hidden relative bg-cover bg-center" style="background-image: url('https://i.ytimg.com/vi/RTyeApYGYtk/hq720.jpg');">
+                                            <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo(this)">
+                                              <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/img/iconof.png') }}" /></button>
+                                            </div>
+                                            <iframe id="videoIframe" class="videoIframe w-full h-full hidden" src="https://www.youtube.com/embed/RTyeApYGYtk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="grid grid-cols-1 2xl:max-w-2xl">
+                                        <div class="flex flex-col justify-center items-center">
+                                          <div class="w-full h-[380px] rounded-xl overflow-hidden relative bg-cover bg-center" style="background-image: url('https://i.ytimg.com/vi/6V8qnZWqFFc/hq720.jpg');">
+                                            <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo(this)">
+                                              <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/img/iconof.png') }}" /></button>
+                                            </div>
+                                            <iframe id="videoIframe" class="videoIframe w-full h-full hidden" src="https://www.youtube.com/embed/6V8qnZWqFFc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="grid grid-cols-1 2xl:max-w-2xl">
+                                        <div class="flex flex-col justify-center items-center">
+                                          <div class="w-full h-[380px] rounded-xl overflow-hidden relative bg-cover bg-center" style="background-image: url('https://i.ytimg.com/vi/603k7mautZk/hq720.jpg');">
+                                            <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo(this)">
+                                              <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/img/iconof.png') }}" /></button>
+                                            </div>
+                                            <iframe id="videoIframe" class="videoIframe w-full h-full hidden" src="https://www.youtube.com/embed/603k7mautZk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           </div>
+                            <div class="swiper-pagination-testimonios !flex justify-start py-3 mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 flex flex-col justify-end">
+                    <img class="w-full h-[300px] sm:h-[400px] lg:h-[600px] 2xl:h-[650px] object-contain object-end" src="{{ asset('images/img/varon_testimonio.png') }}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
+                </div>
+                <div class="-mt-5 lg:col-span-5 grid lg:hidden lg:grid-cols-1 gap-2 xl:gap-4 z-20 min-w-[300px] w-full animate-jump-out animate-once animate-duration-[2000ms] animate-reverse">
+                    <div id="form2" class="bg-[#FDFDFD] p-6 rounded-2xl flex flex-col gap-4">
+                        <form class="flex flex-col gap-4 xl:gap-4">
+                          @csrf
+                            <div class="relative">
+                                <input type="text" name="full_name" id="full_name2" placeholder=" " 
+                                    class="peer border-[#F9D1AF] focus:border-[#EB6C2D] focus:ring-0 font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
+                                <label for="full_name2" class="text-[#013250] absolute left-2 top-2 peer-focus:-top-3 peer-[:not(:placeholder-shown)]:-top-3 transition-all peer-focus:text-sm peer-[:not(:placeholder-shown)]:text-sm peer-focus:bg-white peer-[:not(:placeholder-shown)]:bg-white peer-focus:px-1 peer-[:not(:placeholder-shown)]:px-1 font-aceh 2xl:text-xl peer-focus:2xl:text-lg peer-[:not(:placeholder-shown)]:2xl:text-lg">Nombres y Apellidos</label>
+                            </div>
+                            
+                            <div class="relative">
+                                    <select type="text" name="proyecto" id="proyecto2" placeholder=" " 
+                                        class="customselect peer border-[#F9D1AF] focus:border-[#EB6C2D] focus:ring-0 font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
+                                        <option value="Proyecto Paracas">Proyecto Paracas</option>
+                                        <option value="Proyecto Villa Vista">Proyecto Villa Vista</option>
+                                        <option value="Proyecto Cañete">Proyecto Cañete</option>
+                                    </select>
+                            </div>
+                            
+                            <div class="flex flex-row">
+                                <select class="js-phone-select !max-w-[100px]" name="phone">
+                                    @foreach($paises as $pais)
+                                        <option value="{{ $pais['iso2'] }}" 
+                                                data-phone-code="+{{ $pais['phoneCode'] }}">
+                                            {{ $pais['nameES'] }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                                <div class="relative w-full">
+                                    <input type="text" name="phone" id="phone2" placeholder=" " 
+                                        class="peer border-[#F9D1AF] focus:border-[#EB6C2D] focus:ring-0 font-aceh w-full py-2 px-3 rounded-lg rounded-l-none border-l-transparent text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
+                                    <label for="phone2" class="text-[#013250] absolute left-2 top-2 peer-focus:-top-3 peer-[:not(:placeholder-shown)]:-top-3 transition-all peer-focus:text-sm peer-[:not(:placeholder-shown)]:text-sm peer-focus:bg-white peer-[:not(:placeholder-shown)]:bg-white peer-focus:px-1 peer-[:not(:placeholder-shown)]:px-1 font-aceh 2xl:text-xl peer-focus:2xl:text-lg peer-[:not(:placeholder-shown)]:2xl:text-lg">Telefono</label>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-4 gap-3">
+                                <label for="message" class="col-span-4 -mb-2 text-[#013250] font-aceh text-base 2xl:text-xl">¿Cuenta con una inicial?<span class="text-[#EB6C2D]">*</span></label>
+
+                                <div class="col-span-2 flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
+                                    <input id="input1" type="radio" name="monto" value="no" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                    <label for="input1">No</label>
+                                </div>
+
+                                <div class="col-span-2 flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
+                                    <input id="input2" type="radio" name="monto" value="1480" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                    <label for="input2">S/1,480</label>
+                                </div>
+
+                                <div class="col-span-2 flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
+                                    <input id="input3" type="radio" name="monto" value="2000" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                    <label for="input3">S/2,000</label>
+                                </div>
+
+                                <div class="col-span-2 flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
+                                    <input id="input4" type="radio" name="monto" value="2400" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                    <label for="input4">S/2,400</label>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-4 gap-3">
+                                <label for="message" class="col-span-4 -mb-2 text-[#013250] font-aceh text-base 2xl:text-xl">La cuota mensual que puedo pagar es de<span class="text-[#EB6C2D]">*</span></label>
+
+                                <div class="col-span-2 flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
+                                    <input id="inputcuota1" type="radio" name="cuota" value="no" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                    <label for="inputcuota1">S/300</label>
+                                </div>
+
+                                <div class="col-span-2 flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
+                                    <input id="inputcuota2" type="radio" name="cuota" value="1480" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                    <label for="inputcuota2">S/400</label>
+                                </div>
+
+                                <div class="col-span-2 flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
+                                    <input id="inputcuota3" type="radio" name="cuota" value="2000" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                    <label for="inputcuota3">S/500</label>
+                                </div>
+
+                                <div class="col-span-2 flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
+                                    <input id="inputcuota4" type="radio" name="cuota" value="2400" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                    <label for="inputcuota4">S/600</label>
+                                </div>
+                            </div>
+                            
+                            <div class="relative mt-3">
+                                <input type="date" name="full_name" id="full_name" placeholder=" " 
+                                    class="peer border-[#F9D1AF] focus:border-[#EB6C2D] focus:ring-0 font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
+                                <label for="full_name" class="text-[#013250] absolute left-2 top-2 peer-focus:-top-3 peer-[:not(:placeholder-shown)]:-top-3 transition-all peer-focus:text-sm peer-[:not(:placeholder-shown)]:text-sm peer-focus:bg-white peer-[:not(:placeholder-shown)]:bg-white peer-focus:px-1 peer-[:not(:placeholder-shown)]:px-1 font-aceh 2xl:text-xl peer-focus:2xl:text-lg peer-[:not(:placeholder-shown)]:2xl:text-lg">¿Tienes una fecha aproximada de compra?</label>
+                            </div>
+                            
+
+                            
+                            {{-- <input type="email" name="email" 
+                              placeholder="Correo Electrónico"
+                              class="border-green-500 border-0 focus:!border-0 focus:!ring-0 focus:!ring-transparent
+                              placeholder:text-[#AAC3E6] text-[#97adcb] font-Montserrat_Regular w-full py-3 px-2 rounded-3xl text-base 2xl:text-xl  placeholder-opacity-25 font-light  bg-white"> --}}
+                
+                      
+                          <input type="hidden" name="client_width" id="anchodispositivo">
+                          <input type="hidden" name="client_height" id="largodispositivo">
+                          <input type="hidden" name="client_latitude" id="latitud">
+                          <input type="hidden" name="client_longitude" id="longitud">
+                          <input type="hidden" name="client_system" id="sistema">
+                          <input type="hidden" id="tipo" placeholder="tipo" name="source" value="Inicio" />
+                             
+                           <button type="submit" class="w-full text-white text-center text-lg px-6 py-3 font-aceh rounded-xl bg-gradient-to-r from-[#EB6C2D] to-[#F4B17D] flex flex-row gap-2 justify-center">
+                                Enviar formulario
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                    <mask id="mask0_2002_48" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
+                                    <rect x="0.5" width="24" height="24" fill="white"/>
+                                    </mask>
+                                    <g mask="url(#mask0_2002_48)">
+                                    <path d="M16.675 13.001H4.5V11.001H16.675L11.075 5.40098L12.5 4.00098L20.5 12.001L12.5 20.001L11.075 18.601L16.675 13.001Z" fill="white"/>
+                                    </g>
+                                </svg>
+                            </button>
+
+                            <p class="col-span-4 -mb-2 text-[#013250] font-aceh text-base 2xl:text-xl">Al enviar el formulario estoy aceptando<span class="text-[#EB6C2D]"><a id="linkTerminos2" class="underline"> Términos y Condiciones</a> y <a id="linkPoliticasDatos2" class="underline">Políticas de privacidad</a></span></p>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        {{-- @if ($testimonie->count() > 0)
             <section class="bg-center bg-cover" style="background-image: url({{ asset('images/img/textura_testimonios.png') }})">
                 <div data-aos="fade-down" class="grid grid-cols-1 md:grid-cols-2 w-full gap-12 px-[5%]">
         
@@ -726,7 +725,7 @@
 
                 </div>
             </section>    
-        @endif    
+        @endif     --}}
 
     </main>
 
@@ -749,14 +748,74 @@
     </script>
 
     <script>
-        document.getElementById('scrollButton').addEventListener('click', function(event) {
+        document.getElementById('paracaspr').addEventListener('click', function(event) {
             event.preventDefault(); // Evita el comportamiento predeterminado del enlace
-            smoothScroll('#productoscarrusel', 800); // 800ms de duración del desplazamiento
+            smoothScroll('#paracasllegada', 800); // 800ms de duración del desplazamiento
         });
 
-        document.getElementById('irawsp').addEventListener('click', function(event) {
+        document.getElementById('vellavistapr').addEventListener('click', function(event) {
             event.preventDefault(); // Evita el comportamiento predeterminado del enlace
-            smoothScroll('#bannerprincipal', 800); // 800ms de duración del desplazamiento
+            smoothScroll('#villallegada', 800); // 800ms de duración del desplazamiento
+        });
+
+        document.getElementById('canetepr').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+            smoothScroll('#canetellegada', 800); // 800ms de duración del desplazamiento
+        });
+
+        document.getElementById('paracaspr2').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+            smoothScroll('#paracasllegada', 800); // 800ms de duración del desplazamiento
+        });
+
+        document.getElementById('villavistapr2').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+            smoothScroll('#villallegada', 800); // 800ms de duración del desplazamiento
+        });
+
+        document.getElementById('cenetepr2').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+            smoothScroll('#canetellegada', 800); // 800ms de duración del desplazamiento
+        });
+
+        document.getElementById('iraform').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+            smoothScroll('#form1', 800); // 800ms de duración del desplazamiento
+        });
+
+        document.getElementById('iraform2').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+            smoothScroll('#form2', 800); // 800ms de duración del desplazamiento
+        });
+
+        document.getElementById('masinfoparacas').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+            smoothScroll('#form1', 800); // 800ms de duración del desplazamiento
+        });
+
+        document.getElementById('masinfoparacas2').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+            smoothScroll('#form2', 800); // 800ms de duración del desplazamiento
+        });
+
+        document.getElementById('masinfovilla').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+            smoothScroll('#form1', 800); // 800ms de duración del desplazamiento
+        });
+
+        document.getElementById('masinfovilla2').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+            smoothScroll('#form2', 800); // 800ms de duración del desplazamiento
+        });
+
+        document.getElementById('masinfocanete').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+            smoothScroll('#form1', 800); // 800ms de duración del desplazamiento
+        });
+
+        document.getElementById('masinfocanete2').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+            smoothScroll('#form2', 800); // 800ms de duración del desplazamiento
         });
 
         // Función para desplazamiento suave
@@ -1155,7 +1214,7 @@
                     spaceBetween: 50,
                 },
                 1600: {
-                    slidesPerView: 4,
+                    slidesPerView: 3,
                     spaceBetween: 60,
                 },
             },
@@ -1168,15 +1227,61 @@
 
         var swiper = new Swiper(".testimonios", {
             slidesPerView: 1,
-            spaceBetween: 15,
             loop: true,
+            grabCursor: true,
             centeredSlides: false,
+            initialSlide: 0,
             pagination: {
-                    el: ".swiper-testimonios",
-                    clickable: true,
-                    dynamicBullets: true,
+                el: ".swiper-pagination-testimonios",
+                clickable: true,
             },
+            breakpoints: {
+                0: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                },
+                768: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                },
+                1024: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+
+                },
+            },
+            on: {
+                slideChange: function() {
+                    // Detener el video cuando se desliza a otro slide
+                    let iframes = document.querySelectorAll('.videoIframe');
+                    iframes.forEach(iframe => {
+                        let src = iframe.src;
+                        iframe.src = src.replace("?autoplay=1", ""); // Remueve el autoplay
+                        iframe.classList.add('hidden');
+                    });
+                    // Mostrar los botones de play
+                    let playButtons = document.querySelectorAll('.disparo');
+                    playButtons.forEach(button => {
+                        button.style.display = 'flex';
+                    });
+                }
+            }
         });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('.customselect').select2();
+            
+        });
+        $.fn.select2.defaults.set('language', 'es');
+        function showVideo(element) {
+        const slide = element.closest('.swiper-slide');
+        const videoIframe = slide.querySelector('.videoIframe');
+        videoIframe.classList.remove('hidden');
+        videoIframe.src += "?autoplay=1";
+        element.style.display = 'none';
+        }
     </script>
 
     <script>
@@ -1202,6 +1307,121 @@
         const screenHeight = window.screen.height;
         document.getElementById('anchodispositivo').value = screenWidth;
         document.getElementById('largodispositivo').value = screenHeight;
+    </script>
+    <script>
+            // function formatState(state) {
+            //     if (!state.id) return state.text;
+            //     var baseUrl = "https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3";
+            //     var $state = $(
+            //         '<span class="flex flex-row font-aceh"><img src="' + baseUrl + '/' + state.id.toLowerCase() + '.svg" class="img-flag" style="width: 20px; margin-right: 8px;"/> ' 
+            //         + ' <span >' + $(state.element).data('phone-code') + '</span></span>'
+            //     );
+            //     return $state;
+            // }
+
+            // $(".js-phone-select").select2({
+            //     templateResult: formatState,
+            //     templateSelection: formatState,
+            //     placeholder: "Selecciona un país",
+            //     escapeMarkup: function(m) { return m; }
+            // });
+            function formatState(state) {
+                if (!state.id) return state.text;
+                
+                // CDN de banderas (flag-icon-css)
+                const baseUrl = "https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3";
+                const phoneCode = $(state.element).data('phone-code') || '';
+                const countryName = state.text || '';
+                
+                return $(
+                    `<span class="flex flex-row font-aceh">
+                        <img src="${baseUrl}/${state.id.toLowerCase()}.svg" 
+                            class="img-flag w-5 mr-2 object-contain" 
+                            alt="${countryName}" 
+                            onerror="this.src='https://via.placeholder.com/20x15?text=flag'"/>
+                        <span class="text-base">${phoneCode}</span>
+                    </span>`
+                );
+            }
+
+            // Inicialización mejorada de Select2
+            function initCountrySelect() {
+                const $select = $(".js-phone-select");
+                
+                $select.select2({
+                    templateResult: formatState,
+                    templateSelection: formatState,
+                    placeholder: "Selecciona un país",
+                    width: '100%',
+                    dropdownAutoWidth: true,
+                    escapeMarkup: function(m) { return m; },
+                    language: {
+                        noResults: function() {
+                            return "No se encontraron países";
+                        }
+                    }
+                });
+
+                // Auto-seleccionar país local
+                detectLocalCountry().then(countryCode => {
+                    if (countryCode && $select.find(`option[value="${countryCode}"]`).length) {
+                        $select.val(countryCode).trigger('change');
+                    }
+                });
+            }
+
+            // Función para detectar país local (versión mejorada)
+            async function detectLocalCountry() {
+                try {
+                    // 1. Primero intentar con API IP simple
+                    const ipResponse = await fetch('https://ipapi.co/json/');
+                    if (ipResponse.ok) {
+                        const { country_code } = await ipResponse.json();
+                        if (country_code) return country_code;
+                    }
+                    
+                    // 2. Fallback a geolocalización del navegador
+                    if (navigator.geolocation) {
+                        const position = await new Promise((res, rej) => 
+                            navigator.geolocation.getCurrentPosition(res, rej));
+                        const geoResponse = await fetch(
+                            `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&localityLanguage=es`
+                        );
+                        const { countryCode } = await geoResponse.json();
+                        return countryCode;
+                    }
+                    
+                    // 3. Fallback a idioma del navegador
+                    const lang = navigator.language || navigator.userLanguage || 'es-PE';
+                    return lang.includes('es') ? 'PE' : 'US';
+
+                } catch (error) {
+                    console.error('Error detecting country:', error);
+                    return 'PE'; // Valor por defecto (Peru)
+                }
+            }
+
+            // Inicializar cuando el DOM esté listo
+            $(document).ready(function() {
+                initCountrySelect();
+                
+                // Opcional: Actualizar campo de teléfono al cambiar país
+                $('.js-phone-select').on('change', function() {
+                    const phoneCode = $(this).find(':selected').data('phone-code') || '';
+                    $('#phone_number').val(phoneCode ? `${phoneCode} ` : '').focus();
+                });
+            });
+
+            // async function getCountryByIP() {
+            //     try {
+            //         const response = await fetch('https://ipapi.co/json/');
+            //         const data = await response.json();
+            //         return data.country_code; // Ej: "MX", "US", "ES"
+            //     } catch (error) {
+            //         console.error('Error al detectar país:', error);
+            //         return null;
+            //     }
+            // }
     </script>
 @stop
 

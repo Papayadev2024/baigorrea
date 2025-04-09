@@ -32,6 +32,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
    
+    {{-- Select 2 --}}
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/i18n/es.js"></script>
+    
     {{-- Alpine --}}
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
@@ -83,11 +88,6 @@
                 }
             }
 
-            if (value.length < 9) {
-                alerta("El teléfono solo puede tener 9 dígitos");
-                return false;
-            }
-
             return true;
         }
 
@@ -106,7 +106,6 @@
             event.preventDefault();
             let formDataArray = $(this).serializeArray();
 
-
             if (!validarTelefono($('#telefonoContacto').val())) {
                 return;
             };
@@ -114,7 +113,6 @@
             if (!validarEmail($('#emailContacto').val())) {
                 return;
             };
-
 
             Swal.fire({
 

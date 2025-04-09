@@ -62,6 +62,12 @@ export default {
                 aequitas_bold: ["aequitas_bold"],
                 merchant_medium: ["merchant_medium"],
                 merchant_regular: ["merchant_regular"],
+                tt_hoves_extrabold: ["tt_hoves_extrabold"],
+                tt_hoves_bold: ["tt_hoves_bold"],
+                tt_hoves_black: ["tt_hoves_black"],
+                aceh: ["aceh"],
+                tt_hoves_medium: ["tt_hoves_medium"],
+
 
             },
             fontSize: {
