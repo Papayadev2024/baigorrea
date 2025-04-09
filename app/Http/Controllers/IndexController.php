@@ -849,7 +849,7 @@ class IndexController extends Controller
         $latitud = $request->client_latitude;
         $longitud = $request->client_longitude;
         $sistema = $request->client_system;
-
+      
         try {
             $reglasValidacion = [
                 'full_name' => 'required|string|max:255',

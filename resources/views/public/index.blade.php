@@ -114,7 +114,7 @@
                                     </div>
                                     
                                     <div class="relative">
-                                            <select type="text" name="proyecto" id="proyecto" placeholder=" " 
+                                            <select type="text" name="project" id="proyecto" placeholder=" " 
                                                 class="customselect peer border-[#F9D1AF] focus:border-[#EB6C2D] focus:ring-0 font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
                                                 <option value="Proyecto Paracas">Proyecto Paracas</option>
                                                 <option value="Proyecto Villa Vista">Proyecto Villa Vista</option>
@@ -123,7 +123,7 @@
                                     </div>
                                     
                                     <div class="flex flex-row">
-                                        <select class="js-phone-select !max-w-[120px]" name="phone">
+                                        <select class="js-phone-select !max-w-[120px]" name="code_country">
                                             @foreach($paises as $pais)
                                                 <option value="{{ $pais['iso2'] }}" 
                                                         data-phone-code="+{{ $pais['phoneCode'] }}">
@@ -142,22 +142,22 @@
                                         <label for="message" class="col-span-4 -mb-2 text-[#013250] font-aceh text-base 2xl:text-xl">¿Cuenta con una inicial?<span class="text-[#EB6C2D]">*</span></label>
 
                                         <div class="flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
-                                            <input id="input1" type="radio" name="monto" value="no" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                            <input id="input1" type="radio" name="amount" value="no" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
                                             <label for="input1">No</label>
                                         </div>
 
                                         <div class="flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
-                                            <input id="input2" type="radio" name="monto" value="1480" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                            <input id="input2" type="radio" name="amount" value="1480" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
                                             <label for="input2">S/1,480</label>
                                         </div>
 
                                         <div class="flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
-                                            <input id="input3" type="radio" name="monto" value="2000" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                            <input id="input3" type="radio" name="amount" value="2000" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
                                             <label for="input3">S/2,000</label>
                                         </div>
 
                                         <div class="flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
-                                            <input id="input4" type="radio" name="monto" value="2400" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                            <input id="input4" type="radio" name="amount" value="2400" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
                                             <label for="input4">S/2,400</label>
                                         </div>
                                     </div>
@@ -166,30 +166,30 @@
                                         <label for="message" class="col-span-4 -mb-2 text-[#013250] font-aceh text-base 2xl:text-xl">La cuota mensual que puedo pagar es de<span class="text-[#EB6C2D]">*</span></label>
 
                                         <div class="flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
-                                            <input id="inputcuota1" type="radio" name="cuota" value="no" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                            <input id="inputcuota1" type="radio" name="quote" value="300" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
                                             <label for="inputcuota1">S/300</label>
                                         </div>
 
                                         <div class="flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
-                                            <input id="inputcuota2" type="radio" name="cuota" value="1480" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                            <input id="inputcuota2" type="radio" name="quote" value="400" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
                                             <label for="inputcuota2">S/400</label>
                                         </div>
 
                                         <div class="flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
-                                            <input id="inputcuota3" type="radio" name="cuota" value="2000" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                            <input id="inputcuota3" type="radio" name="quote" value="500" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
                                             <label for="inputcuota3">S/500</label>
                                         </div>
 
                                         <div class="flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
-                                            <input id="inputcuota4" type="radio" name="cuota" value="2400" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                            <input id="inputcuota4" type="radio" name="quote" value="600" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
                                             <label for="inputcuota4">S/600</label>
                                         </div>
                                     </div>
                                     
                                     <div class="relative mt-3">
-                                        <input type="date" name="full_name" id="full_name" placeholder=" " 
+                                        <input type="date" name="date_buy" id="date_buy" placeholder=" " 
                                             class="peer border-[#F9D1AF] focus:border-[#EB6C2D] focus:ring-0 font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
-                                        <label for="full_name" class="text-[#013250] absolute left-2 top-2 peer-focus:-top-3 peer-[:not(:placeholder-shown)]:-top-3 transition-all peer-focus:text-sm peer-[:not(:placeholder-shown)]:text-sm peer-focus:bg-white peer-[:not(:placeholder-shown)]:bg-white peer-focus:px-1 peer-[:not(:placeholder-shown)]:px-1 font-aceh 2xl:text-xl peer-focus:2xl:text-lg peer-[:not(:placeholder-shown)]:2xl:text-lg">¿Tienes una fecha aproximada de compra?</label>
+                                        <label for="date_buy" class="text-[#013250] absolute left-2 top-2 peer-focus:-top-3 peer-[:not(:placeholder-shown)]:-top-3 transition-all peer-focus:text-sm peer-[:not(:placeholder-shown)]:text-sm peer-focus:bg-white peer-[:not(:placeholder-shown)]:bg-white peer-focus:px-1 peer-[:not(:placeholder-shown)]:px-1 font-aceh 2xl:text-xl peer-focus:2xl:text-lg peer-[:not(:placeholder-shown)]:2xl:text-lg">¿Tienes una fecha aproximada de compra?</label>
                                     </div>
                                     
 

@@ -110,9 +110,9 @@
                 return;
             };
 
-            if (!validarEmail($('#emailContacto').val())) {
-                return;
-            };
+            // if (!validarEmail($('#emailContacto').val())) {
+            //     return;
+            // };
 
             Swal.fire({
 

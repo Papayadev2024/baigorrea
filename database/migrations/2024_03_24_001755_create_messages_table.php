@@ -29,6 +29,11 @@ return new class extends Migration
             $table->string('ip')->nullable();
             $table->string('device')->nullable();
 
+            $table->string('amount')->nullable();
+            $table->string('quote')->nullable();
+            $table->string('date_buy')->nullable();
+            $table->string('project')->nullable();
+
             $table->boolean('status')->default(true);
             $table->boolean('is_read')->default(false);
             $table->string('comunication')->nullable();
