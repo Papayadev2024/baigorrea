@@ -9,20 +9,43 @@
             </header>
             <div class="p-3">
 
-                <div class="p-6">
-                    <p class="font-bold">Nombre completo:</p>
-                    <p> {{ $message->full_name }} </p>
-                    <br>
-                    <p class="font-bold">Correo:</p>
-                    <p> {{ $message->email }} </p>
-                    <br>
-                    <p class="font-bold ">Teléfono:</p>
-                    <p class="mb-5"> {{ $message->phone }} </p>
-                    {{-- <br> --}}
-                    {{-- <p class="font-bold">Mensaje:</p>
-                    <p class="mb-5">
-                        {{ $message->message }}
-                    </p> --}}
+                <div class="p-0 md:p-6">
+                    <div class="overflow-x-auto">
+                        <table class="w-full bg-white border-collapse">
+                            <tbody>
+                                <!-- Fila 1 -->
+                                <tr class="block md:table-row">
+                                    <!-- Grupo 1 -->
+                                    <td class="block md:table-cell border py-2 px-4 font-bold">Nombre completo:</td>
+                                    <td class="block md:table-cell border py-2 px-4">{{ $message->full_name }}</td>
+                                    
+                                    <!-- Grupo 2 -->
+                                    <td class="block md:table-cell border py-2 px-4 font-bold">Proyecto:</td>
+                                    <td class="block md:table-cell border py-2 px-4">{{ $message->project }}</td>
+                                    
+                                    <!-- Grupo 3 -->
+                                    <td class="block md:table-cell border py-2 px-4 font-bold">Teléfono:</td>
+                                    <td class="block md:table-cell border py-2 px-4">{{ $message->phone }}</td>
+                                </tr>
+                                
+                                <!-- Fila 2 -->
+                                <tr class="block md:table-row">
+                                    <!-- Grupo 1 -->
+                                    <td class="block md:table-cell border py-2 px-4 font-bold">Monto:</td>
+                                    <td class="block md:table-cell border py-2 px-4">{{ $message->amount }}</td>
+                                    
+                                    <!-- Grupo 2 -->
+                                    <td class="block md:table-cell border py-2 px-4 font-bold">Cuota mensual:</td>
+                                    <td class="block md:table-cell border py-2 px-4">{{ $message->quote }}</td>
+                                    
+                                    <!-- Grupo 3 -->
+                                    <td class="block md:table-cell border py-2 px-4 font-bold">Fecha:</td>
+                                    <td class="block md:table-cell border py-2 px-4">{{ $message->date_buy }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
 
                     @if (count($message->answers) > 0)
                         <div class="mb-4">
@@ -41,7 +64,7 @@
                         </div>
                     @endif
 
-                    <form action="{{ route('replyMailing', $message->id) }}" method="POST">
+                    <form class="py-4" action="{{ route('replyMailing', $message->id) }}" method="POST">
 
                         <hr class="mb-2">
                         @csrf

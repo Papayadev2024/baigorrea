@@ -849,17 +849,45 @@ class IndexController extends Controller
         $latitud = $request->client_latitude;
         $longitud = $request->client_longitude;
         $sistema = $request->client_system;
+        $codigoPais = $request->code_country;
+
+        try {
+
+          $json = file_get_contents(public_path('phone/countries_phone.json'));
+          $paises = json_decode($json, true);
+          
+          if (json_last_error() !== JSON_ERROR_NONE) {
+              throw new \Exception('Error al decodificar JSON');
+          }
+          
+          $paisSeleccionado = null;
+
+          foreach ($paises as $pais) {
+              if ($pais['iso2'] === $codigoPais) {
+                  $paisSeleccionado = $pais;
+                  break;
+              }
+          }
+
+          $codigoTelefono = $paisSeleccionado['phoneCode'] ?? " ";
+
+        } catch (\Exception $e) {
+          $codigoTelefono = " ";
+        }
+
+        $data['phone'] = "+". $codigoTelefono . $request->phone;
       
         try {
             $reglasValidacion = [
                 'full_name' => 'required|string|max:255',
-                //'email' => 'required|email|max:255',
+                'amount' => 'required',
+                'quote' => 'required',
+                'phone' => 'required|integer',
             ];
             $mensajes = [
                 'full_name.required' => 'El campo nombre es obligatorio.',
-                // 'email.required' => 'El campo correo electrónico es obligatorio.',
-                // 'email.email' => 'El formato del correo electrónico no es válido.',
-                // 'email.max' => 'El campo correo electrónico no puede tener más de :max caracteres.',
+                'quote.required' => 'El campo cuota mensual es obligatorio.',
+                'amount.required' => 'El campo monto inicial es obligatorio.',
             ];
 
             $request->validate($reglasValidacion, $mensajes);
@@ -1069,7 +1097,7 @@ class IndexController extends Controller
         $emailadmin = $generales->email;
         $appUrl = env('APP_URL');
         $name = 'Administrador';
-        $mensaje = "Nueva solicitud de contacto - Adriana Pezo";
+        $mensaje = "Nueva solicitud de contacto - Baigorrea";
         $mail = EmailConfig::config($name, $mensaje);
 
         try {
@@ -1124,7 +1152,7 @@ class IndexController extends Controller
                         $appUrl .
                         '" target="_blank" style="text-align:center" ><img src="' .
                         $appUrl .
-                        '/mail/logo.png" alt="hpi" /></a>
+                        '/mail/logo.png" alt="Baigorrea" /></a>
                     </th>
                   </tr>
                 </thead>
@@ -1133,15 +1161,15 @@ class IndexController extends Controller
                     <td>
                       <p
                         style="
-                          color: #6486CD;
+                          color: #FFFFFF;
                           font-size: 40px;
                           line-height: normal;
                           font-family: Google Sans;
                           font-weight: bold;
                         "
                       >
-                        ¡Gracias
-                        <span style="color: #354273">por escribirnos!</span>
+                      <span style="color: #E1DE18">¡NUEVO MENSAJE</span>
+                        DE CONTACTO!
                       </p>
                     </td>
                   </tr>
@@ -1150,7 +1178,7 @@ class IndexController extends Controller
                     <td>
                       <p
                         style="
-                          color: #354273;
+                          color: #FFFFFF;
                           font-weight: 500;
                           font-size: 18px;
                           text-align: center;
@@ -1169,7 +1197,7 @@ class IndexController extends Controller
                     <td>
                       <p
                         style="
-                          color: #354273;
+                          color: #FFFFFF;
                           font-weight: 500;
                           font-size: 18px;
                           text-align: center;
@@ -1192,7 +1220,7 @@ class IndexController extends Controller
                         '"
                         style="
                           text-decoration: none;
-                          background-color: #6486CD;
+                          background-color: #EB6C2D;
                           color: #ffffff;
                           padding: 13px 20px;
                           display: inline-flex;

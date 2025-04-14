@@ -74,6 +74,12 @@
         .js-phone-select + .select2-container {
             max-width: 100px!important;
         }
+
+        .word {
+            opacity: 0;
+        }
+
+      
     </style>
 @stop
 @section('content')
@@ -90,12 +96,22 @@
                     
                     <div class="lg:col-span-2 flex flex-col sm:-space-y-10 pt-10 md:pt-16">
                         <div class="flex flex-col justify-center items-start gap-8 px-[5%] sm:px-0">
-                            <h2 class="text-white mx-auto lg:mx-0 text-left sm:text-center lg:text-left max-w-2xl 2xl:max-w-3xl font-tt_hoves_bold uppercase text-4xl sm:text-5xl xl:text-[64px] leading-tight lg:!leading-[65px] tracking-tighter" data-aos="fade-down">Tu terreno en pisco al alcance de tu <span class="text-[#E1DE18]">bolsillo</span></h2>
+                            <h2 id="animated-text" class="z-10 text-white mx-auto lg:mx-0 text-left sm:text-center lg:text-left max-w-2xl 2xl:max-w-3xl font-tt_hoves_bold uppercase text-4xl sm:text-5xl xl:text-[64px] leading-tight lg:!leading-[65px] tracking-tighter" >
+                                <span class="word">Tu</span>
+                                <span class="word">terreno</span>
+                                <span class="word">en</span>
+                                <span class="word">pisco</span>
+                                <span class="word">al</span>
+                                <span class="word">alcance</span>
+                                <span class="word">de</span>
+                                <span class="word">tu</span>
+                                <span class="word text-[#E1DE18]">bolsillo</span>
+                            </h2>
                         </div>
                        
                         <div class="flex flex-col justify-end items-start relative order-2 lg:order-1">
                             <div class="relative mx-auto lg:mx-0" data-aos="fade-down">
-                                <img class="w-full h-[300px] sm:h-[400px] xl:h-[500px] 2xl:h-[600px]  -mb-7 z-10 object-cover sm:object-contain object-right sm:object-center" src="{{asset('images/img/imagenportada.png')}}"
+                                <img class="imagenportada w-full h-[300px] sm:h-[400px] xl:h-[500px] 2xl:h-[600px]  -mb-7 z-10 object-cover sm:object-contain object-right sm:object-center" src="{{asset('images/img/imagenportada.png')}}"
                                     onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
                             </div>
                         </div>
@@ -103,8 +119,8 @@
     
                     <div class="lg:col-span-1 flex flex-col sm:flex-row gap-5 sm:gap-10 lg:flex-col justify-around items-start lg:items-center order-1 lg:order-2 2xl:py-12">
                         
-                        <div class="hidden lg:grid grid-cols-1 gap-2 xl:gap-4 z-20 min-w-[390px] xl:w-[450px] 2xl:w-[550px] 3xl:w-[550px] max-w-[600px] animate-jump-out animate-once animate-duration-[2000ms] animate-reverse">
-                            <div id="form1" class="bg-[#FDFDFD] p-4 xl:p-6 2xl:p-8 rounded-2xl flex flex-col gap-4">
+                        <div class="hidden lg:grid grid-cols-1 gap-2 xl:gap-4 z-20 min-w-[390px] xl:w-[450px] 2xl:w-[550px] 3xl:w-[550px] max-w-[600px]">
+                            <div id="form1" class="bg-[#FDFDFD] p-4 xl:p-6 2xl:p-8 rounded-2xl flex flex-col gap-4 formulariocontacto">
                                 <form class="flex flex-col gap-2 xl:gap-4" id="formContactos">
                                   @csrf
                                     <div class="relative">
@@ -125,7 +141,7 @@
                                     <div class="flex flex-row">
                                         <select class="js-phone-select !max-w-[120px]" name="code_country">
                                             @foreach($paises as $pais)
-                                                <option value="{{ $pais['iso2'] }}" 
+                                                <option value="{{ $pais['iso2'] }}"
                                                         data-phone-code="+{{ $pais['phoneCode'] }}">
                                                     {{ $pais['nameES'] }}
                                                 </option>
@@ -294,10 +310,16 @@
                 </div>
                 <div class="flex flex-col gap-5 justify-center">
 
-                    <h2 class="text-[#013250] text-left font-tt_hoves_bold uppercase text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl !leading-tight tracking-wide" data-aos="fade-down">
-                        Vive frente al mar <br> en <span class="text-[#EB6C2D]">Paracas</span></h2>
+                    <h2 id="animated-second-text" class="text-[#013250] text-left font-tt_hoves_bold uppercase text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl !leading-tight tracking-wide">
+                        <span class="word">Vive</span>
+                        <span class="word">frente</span>
+                        <span class="word">al</span>
+                        <span class="word">mar</span><br>
+                        <span class="word">en</span>      
+                        <span class="word text-[#EB6C2D]">Paracas</span>
+                    </h2>
                     
-                    <div class="flex">
+                    <div class="flex precios1derecha">
                         <div class="grid grid-cols-2 rounded-2xl  border border-[#013250] w-auto">
                             <div class="flex flex-col border-r border-[#013250] px-4 py-2">
                                 <p class="font-aceh text-[#014568] text-lg">Desde</p>
@@ -311,20 +333,20 @@
                         </div>
                     </div>
 
-                    <p class="font-aceh text-[#014568] text-lg 2xl:text-xl">
+                    <p class="font-aceh text-[#014568] text-lg 2xl:text-xl precios1derecha">
                         Despierta con la brisa marina y el sol radiante todo el año. 
                         Nuestro proyecto en Paracas te ofrece la tranquilidad de la naturaleza 
                         con el confort de una inversión segura.
                     </p>
 
-                    <ul class="font-aceh text-[#014568] text-lg 2xl:text-xl">
+                    <ul class="font-aceh text-[#014568] text-lg 2xl:text-xl precios1derecha">
                         <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> A minutos de la reserva natural</li>
                         <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Alto potencial de revalorización</li>
                         <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Clima cálido todo el año</li>
                         <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Financiamiento sin bancos</li>
                     </ul>
 
-                    <div id="masinfoparacas" class="text-white hidden cursor-pointer lg:flex text-center text-lg px-6 py-3 font-aceh rounded-xl bg-gradient-to-r from-[#004469] to-[#61C0E0] flex-row gap-2 justify-center">
+                    <div id="masinfoparacas" class="precios1derecha text-white hidden cursor-pointer lg:flex text-center text-lg px-6 py-3 font-aceh rounded-xl bg-gradient-to-r from-[#004469] to-[#61C0E0] flex-row gap-2 justify-center">
                         Quiero más información 
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                             <mask id="mask0_2002_48" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
@@ -336,7 +358,7 @@
                         </svg>
                     </div>
 
-                    <div id="masinfoparacas2" class="text-white lg:hidden cursor-pointer text-center text-lg px-6 py-3 font-aceh rounded-xl bg-gradient-to-r from-[#004469] to-[#61C0E0] flex flex-row gap-2 justify-center">
+                    <div id="masinfoparacas2" class="precios1derecha text-white lg:hidden cursor-pointer text-center text-lg px-6 py-3 font-aceh rounded-xl bg-gradient-to-r from-[#004469] to-[#61C0E0] flex flex-row gap-2 justify-center">
                         Quiero más información 
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                             <mask id="mask0_2002_48" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
@@ -358,10 +380,16 @@
                 </div>
                 <div class="flex flex-col gap-5 justify-center">
 
-                    <h2 class="text-[#013250] text-left font-tt_hoves_bold uppercase text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl !leading-tight tracking-wide" data-aos="fade-down">
-                        Escápate a tu Refugio <br> en <span class="text-[#EB6C2D]">villa vista</span></h2>
+                    <h2 id="animated-third-text" class="text-[#013250] text-left font-tt_hoves_bold uppercase text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl !leading-tight tracking-wide">
+                        <span class="word">Escápate</span>
+                        <span class="word">a</span>
+                        <span class="word">tu</span>
+                        <span class="word">Refugio</span><br>
+                        <span class="word">en</span>
+                        <span class="word text-[#EB6C2D]">villa vista</span>
+                    </h2>
                     
-                    <div class="flex">
+                    <div class="flex precios2izquierda">
                         <div class="grid grid-cols-2 rounded-2xl  border border-[#013250] w-auto">
                             <div class="flex flex-col border-r border-[#013250] px-4 py-2">
                                 <p class="font-aceh text-[#014568] text-lg">Desde</p>
@@ -375,20 +403,20 @@
                         </div>
                     </div>
 
-                    <p class="font-aceh text-[#014568] text-lg 2xl:text-xl">
+                    <p class="font-aceh text-[#014568] text-lg 2xl:text-xl precios2izquierda">
                         Tu lugar ideal para disfrutar del verano y el descanso. 
                         Este proyecto te da acceso exclusivo a un club privado y 
                         espacios diseñados para el confort.
                     </p>
 
-                    <ul class="font-aceh text-[#014568] text-lg 2xl:text-xl">
+                    <ul class="font-aceh text-[#014568] text-lg 2xl:text-xl precios2izquierda">
                         <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Ubicación privilegiada cerca del mar</li>
                         <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Financiamiento sin bancos</li>
                         <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Seguridad 24/7 y áreas recreativas</li>
                         <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Opción de financiamiento directo</li>
                     </ul>
 
-                    <div id="masinfovilla" class="text-white cursor-pointer hidden lg:flex text-center text-lg px-6 py-3 font-aceh rounded-xl bg-gradient-to-r from-[#004469] to-[#61C0E0]  flex-row gap-2 justify-center">
+                    <div id="masinfovilla" class="precios2izquierda text-white cursor-pointer hidden lg:flex text-center text-lg px-6 py-3 font-aceh rounded-xl bg-gradient-to-r from-[#004469] to-[#61C0E0]  flex-row gap-2 justify-center">
                         Quiero más información 
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                             <mask id="mask0_2002_48" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
@@ -400,7 +428,7 @@
                         </svg>
                     </div>
 
-                    <div id="masinfovilla2" class="text-white cursor-pointer text-center flex lg:hidden text-lg px-6 py-3 font-aceh rounded-xl bg-gradient-to-r from-[#004469] to-[#61C0E0]  flex-row gap-2 justify-center">
+                    <div id="masinfovilla2" class="precios2izquierda text-white cursor-pointer text-center flex lg:hidden text-lg px-6 py-3 font-aceh rounded-xl bg-gradient-to-r from-[#004469] to-[#61C0E0]  flex-row gap-2 justify-center">
                         Quiero más información 
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                             <mask id="mask0_2002_48" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
@@ -422,10 +450,13 @@
                 </div>
                 <div class="flex flex-col gap-5 justify-center">
 
-                    <h2 class="text-[#013250] text-left font-tt_hoves_bold uppercase text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl !leading-tight tracking-wide" data-aos="fade-down">
-                        Naturaleza y Conectividad <br><span class="text-[#EB6C2D]">en Cañete</span></h2>
+                    <h2 id="animated-four-text" class="text-[#013250] text-left font-tt_hoves_bold uppercase text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl !leading-tight tracking-wide">
+                        <span class="word">Naturaleza</span>
+                        <span class="word">y</span>
+                        <span class="word">Conectividad</span>
+                        <br><span class="word text-[#EB6C2D]">en Cañete</span></h2>
                     
-                    <div class="flex">
+                    <div class="flex precios3derecha">
                         <div class="grid grid-cols-2 rounded-2xl  border border-[#013250] w-auto">
                             <div class="flex flex-col border-r border-[#013250] px-4 py-2">
                                 <p class="font-aceh text-[#014568] text-lg">Desde</p>
@@ -439,20 +470,20 @@
                         </div>
                     </div>
 
-                    <p class="font-aceh text-[#014568] text-lg 2xl:text-xl">
+                    <p class="font-aceh text-[#014568] text-lg 2xl:text-xl precios3derecha">
                         Equilibrio perfecto entre ciudad y naturaleza. 
                         Vive rodeado de áreas verdes con una inversión inteligente 
                         en una zona en crecimiento.
                     </p>
 
-                    <ul class="font-aceh text-[#014568] text-lg 2xl:text-xl">
+                    <ul class="font-aceh text-[#014568] text-lg 2xl:text-xl precios3derecha">
                         <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Gran conectividad con la ciudad</li>
                         <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Seguridad y tranquilidad aseguradas</li>
                         <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Espacios diseñados para el bienestar</li>
                         <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Financiamiento sin bancos</li>
                     </ul>
 
-                    <div id="masinfocanete" class="text-white cursor-pointer text-center hidden lg:flex text-lg px-6 py-3 font-aceh rounded-xl bg-gradient-to-r from-[#004469] to-[#61C0E0] flex-row gap-2 justify-center">
+                    <div id="masinfocanete" class="precios3derecha text-white cursor-pointer text-center hidden lg:flex text-lg px-6 py-3 font-aceh rounded-xl bg-gradient-to-r from-[#004469] to-[#61C0E0] flex-row gap-2 justify-center">
                         Descubre más
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                             <mask id="mask0_2002_48" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
@@ -464,7 +495,7 @@
                         </svg>
                     </div>
 
-                    <div id="masinfocanete2" class="text-white cursor-pointer text-center flex lg:hidden text-lg px-6 py-3 font-aceh rounded-xl bg-gradient-to-r from-[#004469] to-[#61C0E0] flex-row gap-2 justify-center">
+                    <div id="masinfocanete2" class="precios3derecha text-white cursor-pointer text-center flex lg:hidden text-lg px-6 py-3 font-aceh rounded-xl bg-gradient-to-r from-[#004469] to-[#61C0E0] flex-row gap-2 justify-center">
                         Descubre más
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                             <mask id="mask0_2002_48" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="24">
@@ -543,11 +574,11 @@
                     </div>
                 </div>
                 <div class="lg:col-span-5 flex flex-col justify-end">
-                    <img class="w-full h-[300px] sm:h-[400px] lg:h-[600px] 2xl:h-[650px] object-contain object-end" src="{{ asset('images/img/varon_testimonio.png') }}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
+                    <img class="imagentestimonio w-full h-[300px] sm:h-[400px] lg:h-[600px] 2xl:h-[650px] object-contain object-end" src="{{ asset('images/img/varon_testimonio.png') }}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
                 </div>
-                <div class="-mt-5 lg:col-span-5 grid lg:hidden lg:grid-cols-1 gap-2 xl:gap-4 z-20 min-w-[300px] w-full animate-jump-out animate-once animate-duration-[2000ms] animate-reverse">
+                <div class="-mt-5 lg:col-span-5 grid lg:hidden lg:grid-cols-1 gap-2 xl:gap-4 z-20 min-w-[300px] w-full">
                     <div id="form2" class="bg-[#FDFDFD] p-6 rounded-2xl flex flex-col gap-4">
-                        <form class="flex flex-col gap-4 xl:gap-4">
+                        <form class="flex flex-col gap-4 xl:gap-4" id="formContactos2">
                           @csrf
                             <div class="relative">
                                 <input type="text" name="full_name" id="full_name2" placeholder=" " 
@@ -556,7 +587,7 @@
                             </div>
                             
                             <div class="relative">
-                                    <select type="text" name="proyecto" id="proyecto2" placeholder=" " 
+                                    <select type="text" name="project" id="proyecto2" placeholder=" " 
                                         class="customselect peer border-[#F9D1AF] focus:border-[#EB6C2D] focus:ring-0 font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
                                         <option value="Proyecto Paracas">Proyecto Paracas</option>
                                         <option value="Proyecto Villa Vista">Proyecto Villa Vista</option>
@@ -565,7 +596,7 @@
                             </div>
                             
                             <div class="flex flex-row">
-                                <select class="js-phone-select !max-w-[100px]" name="phone">
+                                <select class="js-phone-select !max-w-[100px]" name="code_country">
                                     @foreach($paises as $pais)
                                         <option value="{{ $pais['iso2'] }}" 
                                                 data-phone-code="+{{ $pais['phoneCode'] }}">
@@ -584,22 +615,22 @@
                                 <label for="message" class="col-span-4 -mb-2 text-[#013250] font-aceh text-base 2xl:text-xl">¿Cuenta con una inicial?<span class="text-[#EB6C2D]">*</span></label>
 
                                 <div class="col-span-2 flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
-                                    <input id="input1" type="radio" name="monto" value="no" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                    <input id="input1" type="radio" name="amount" value="no" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
                                     <label for="input1">No</label>
                                 </div>
 
                                 <div class="col-span-2 flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
-                                    <input id="input2" type="radio" name="monto" value="1480" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                    <input id="input2" type="radio" name="amount" value="1480" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
                                     <label for="input2">S/1,480</label>
                                 </div>
 
                                 <div class="col-span-2 flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
-                                    <input id="input3" type="radio" name="monto" value="2000" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                    <input id="input3" type="radio" name="amount" value="2000" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
                                     <label for="input3">S/2,000</label>
                                 </div>
 
                                 <div class="col-span-2 flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
-                                    <input id="input4" type="radio" name="monto" value="2400" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                    <input id="input4" type="radio" name="amount" value="2400" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
                                     <label for="input4">S/2,400</label>
                                 </div>
                             </div>
@@ -608,30 +639,30 @@
                                 <label for="message" class="col-span-4 -mb-2 text-[#013250] font-aceh text-base 2xl:text-xl">La cuota mensual que puedo pagar es de<span class="text-[#EB6C2D]">*</span></label>
 
                                 <div class="col-span-2 flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
-                                    <input id="inputcuota1" type="radio" name="cuota" value="no" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                    <input id="inputcuota1" type="radio" name="quote" value="300" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
                                     <label for="inputcuota1">S/300</label>
                                 </div>
 
                                 <div class="col-span-2 flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
-                                    <input id="inputcuota2" type="radio" name="cuota" value="1480" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                    <input id="inputcuota2" type="radio" name="quote" value="400" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
                                     <label for="inputcuota2">S/400</label>
                                 </div>
 
                                 <div class="col-span-2 flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
-                                    <input id="inputcuota3" type="radio" name="cuota" value="2000" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                    <input id="inputcuota3" type="radio" name="quote" value="500" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
                                     <label for="inputcuota3">S/500</label>
                                 </div>
 
                                 <div class="col-span-2 flex flex-row gap-2 items-center justify-center relative border border-[#F9D1AF] hover:border-[#EB6C2D] font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
-                                    <input id="inputcuota4" type="radio" name="cuota" value="2400" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
+                                    <input id="inputcuota4" type="radio" name="quote" value="600" class="text-[#EB6C2D] border-[#F9D1AF] focus:ring-0 focus:ring-transparent focus:border-[#EB6C2D]">
                                     <label for="inputcuota4">S/600</label>
                                 </div>
                             </div>
                             
                             <div class="relative mt-3">
-                                <input type="date" name="full_name" id="full_name" placeholder=" " 
+                                <input type="date" name="date_buy" id="date_buy2" placeholder=" " 
                                     class="peer border-[#F9D1AF] focus:border-[#EB6C2D] focus:ring-0 font-aceh w-full py-2 px-3 rounded-lg text-base 2xl:text-xl text-[#013250] bg-[#FDFDFD]">
-                                <label for="full_name" class="text-[#013250] absolute left-2 top-2 peer-focus:-top-3 peer-[:not(:placeholder-shown)]:-top-3 transition-all peer-focus:text-sm peer-[:not(:placeholder-shown)]:text-sm peer-focus:bg-white peer-[:not(:placeholder-shown)]:bg-white peer-focus:px-1 peer-[:not(:placeholder-shown)]:px-1 font-aceh 2xl:text-xl peer-focus:2xl:text-lg peer-[:not(:placeholder-shown)]:2xl:text-lg">¿Tienes una fecha aproximada de compra?</label>
+                                <label for="date_buy2" class="text-[#013250] absolute left-2 top-2 peer-focus:-top-3 peer-[:not(:placeholder-shown)]:-top-3 transition-all peer-focus:text-sm peer-[:not(:placeholder-shown)]:text-sm peer-focus:bg-white peer-[:not(:placeholder-shown)]:bg-white peer-focus:px-1 peer-[:not(:placeholder-shown)]:px-1 font-aceh 2xl:text-xl peer-focus:2xl:text-lg peer-[:not(:placeholder-shown)]:2xl:text-lg">¿Tienes una fecha aproximada de compra?</label>
                             </div>
                             
 
@@ -1309,22 +1340,6 @@
         document.getElementById('largodispositivo').value = screenHeight;
     </script>
     <script>
-            // function formatState(state) {
-            //     if (!state.id) return state.text;
-            //     var baseUrl = "https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3";
-            //     var $state = $(
-            //         '<span class="flex flex-row font-aceh"><img src="' + baseUrl + '/' + state.id.toLowerCase() + '.svg" class="img-flag" style="width: 20px; margin-right: 8px;"/> ' 
-            //         + ' <span >' + $(state.element).data('phone-code') + '</span></span>'
-            //     );
-            //     return $state;
-            // }
-
-            // $(".js-phone-select").select2({
-            //     templateResult: formatState,
-            //     templateSelection: formatState,
-            //     placeholder: "Selecciona un país",
-            //     escapeMarkup: function(m) { return m; }
-            // });
             function formatState(state) {
                 if (!state.id) return state.text;
                 
@@ -1412,16 +1427,165 @@
                 });
             });
 
-            // async function getCountryByIP() {
-            //     try {
-            //         const response = await fetch('https://ipapi.co/json/');
-            //         const data = await response.json();
-            //         return data.country_code; // Ej: "MX", "US", "ES"
-            //     } catch (error) {
-            //         console.error('Error al detectar país:', error);
-            //         return null;
-            //     }
-            // }
+    </script>
+
+    <script>
+        // Registrar el plugin ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+        // Esperar a que el DOM esté listo
+        document.addEventListener("DOMContentLoaded", () => {
+        // Seleccionar todas las palabras
+        const words = document.querySelectorAll("#animated-text .word");
+        const words_second = document.querySelectorAll("#animated-second-text .word");
+        const words_third = document.querySelectorAll("#animated-third-text .word");
+        const words_four = document.querySelectorAll("#animated-four-text .word");
+        // Animación palabra por palabra
+        gsap.to(words, {
+            opacity: 1,
+            x: 0, // Posición final (0 = sin desplazamiento)
+            stagger: 0.1, // Retraso entre cada palabra (0.1s)
+            duration: 0.5, // Duración de cada animación
+            ease: "power2.out", // Efecto de aceleración
+            scrollTrigger: {
+            trigger: "#animated-text", // Elemento que activa la animación
+            start: "top 80%", // Cuando el 80% del elemento esté visible
+            toggleActions: "play restart restart reset", // Solo se reproduce una vez
+            },
+            // Posición inicial (fuera de la pantalla a la izquierda)
+            x: -20, 
+        });
+
+        gsap.to(words_second, {
+            opacity: 1,
+            x: 0, // Posición final (0 = sin desplazamiento)
+            stagger: 0.1, // Retraso entre cada palabra (0.1s)
+            duration: 0.5, // Duración de cada animación
+            ease: "power2.out", // Efecto de aceleración
+            scrollTrigger: {
+            trigger: "#animated-second-text", // Elemento que activa la animación
+            start: "top 80%", // Cuando el 80% del elemento esté visible
+            toggleActions: "play restart restart reset", // Solo se reproduce una vez
+            },
+            // Posición inicial (fuera de la pantalla a la izquierda)
+            x: 20, 
+        });
+
+        gsap.to(words_third, {
+            opacity: 1,
+            x: 0, // Posición final (0 = sin desplazamiento)
+            stagger: 0.1, // Retraso entre cada palabra (0.1s)
+            duration: 0.5, // Duración de cada animación
+            ease: "power2.out", // Efecto de aceleración
+            scrollTrigger: {
+            trigger: "#animated-third-text", // Elemento que activa la animación
+            start: "top 80%", // Cuando el 80% del elemento esté visible
+            toggleActions: "play restart restart reset", // Solo se reproduce una vez
+            },
+            // Posición inicial (fuera de la pantalla a la izquierda)
+            x: 20, 
+        });
+
+        gsap.to(words_four, {
+            opacity: 1,
+            x: 0, // Posición final (0 = sin desplazamiento)
+            stagger: 0.1, // Retraso entre cada palabra (0.1s)
+            duration: 0.5, // Duración de cada animación
+            ease: "power2.out", // Efecto de aceleración
+            scrollTrigger: {
+            trigger: "#animated-four-text", // Elemento que activa la animación
+            start: "top 80%", // Cuando el 80% del elemento esté visible
+            toggleActions: "play restart restart reset", // Solo se reproduce una vez
+            },
+            // Posición inicial (fuera de la pantalla a la izquierda)
+            x: 20, 
+        });
+
+        gsap.from(".imagenportada", {
+            x: -200, // Comienza 200px a la izquierda
+            scale: 0.8, // Zoom inicial (80% del tamaño)
+            opacity: 0, // Empieza invisible
+            duration: 1.5,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".imagenportada", // Elemento que activa la animación
+                start: "top 80%", // Cuando el 80% del contenedor entre en la vista
+                toggleActions: "play restart restart reset", // Solo se reproduce una vez
+                markers: false // Cambia a true para ver el punto de activación (debug)
+            }
+        });
+
+        gsap.from(".formulariocontacto", {
+            x: 200, // Comienza 200px a la izquierda
+            scale: 0.8, // Zoom inicial (80% del tamaño)
+            opacity: 0, // Empieza invisible
+            duration: 1.5,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".formulariocontacto", // Elemento que activa la animación
+                start: "top 80%", // Cuando el 80% del contenedor entre en la vista
+                toggleActions: "play restart restart reset", // Solo se reproduce una vez
+                markers: false // Cambia a true para ver el punto de activación (debug)
+            }
+        });
+
+        gsap.from(".precios1derecha", {
+            y: 100, // Comienza 200px a la izquierda
+            scale: 0.8, // Zoom inicial (80% del tamaño)
+            opacity: 0, // Empieza invisible
+            duration: 1.5,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".precios1derecha", // Elemento que activa la animación
+                start: "top 80%", // Cuando el 80% del contenedor entre en la vista
+                toggleActions: "play restart restart reset", // Solo se reproduce una vez
+                markers: false // Cambia a true para ver el punto de activación (debug)
+            }
+        });
+
+        gsap.from(".precios2izquierda", {
+            y: 100, // Comienza 200px a la izquierda
+            scale: 0.8, // Zoom inicial (80% del tamaño)
+            opacity: 0, // Empieza invisible
+            duration: 1.5,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".precios2izquierda", // Elemento que activa la animación
+                start: "top 80%", // Cuando el 80% del contenedor entre en la vista
+                toggleActions: "play restart restart reset", // Solo se reproduce una vez
+                markers: false // Cambia a true para ver el punto de activación (debug)
+            }
+        });
+
+        gsap.from(".precios3derecha", {
+            y: 100, // Comienza 200px a la izquierda
+            scale: 0.8, // Zoom inicial (80% del tamaño)
+            opacity: 0, // Empieza invisible
+            duration: 1.5,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".precios3derecha", // Elemento que activa la animación
+                start: "top 80%", // Cuando el 80% del contenedor entre en la vista
+                toggleActions: "play restart restart reset", // Solo se reproduce una vez
+                markers: false // Cambia a true para ver el punto de activación (debug)
+            }
+        });
+       
+        gsap.from(".imagentestimonio", {
+            x: 30, // Comienza 200px a la izquierda
+            scale: 1, // Zoom inicial (80% del tamaño)
+            opacity: 0, // Empieza invisible
+            duration: 1.5,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: ".imagentestimonio", // Elemento que activa la animación
+                start: "top 80%", // Cuando el 80% del contenedor entre en la vista
+                toggleActions: "play restart restart reset", // Solo se reproduce una vez
+                markers: false // Cambia a true para ver el punto de activación (debug)
+            }
+        });
+
+
+        });
     </script>
 @stop
 

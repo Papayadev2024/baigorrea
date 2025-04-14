@@ -21,7 +21,7 @@
       </button>
       <!-- Logo -->
       <a class="block mt-8 " href="{{ route('dashboard') }}">
-        <img class="w-full" src="{{ asset('images/svg/logoadrianafinal.svg') }}" alt="AdrianaPezo" />
+        <img class="w-full" src="{{ asset('images/svg/logobaigorrea.svg') }}" alt="AdrianaPezo" />
       </a>
     </div>
 
@@ -32,7 +32,7 @@
         <h3 class="text-xs uppercase text-slate-500 font-semibold pl-3">
           <span class="hidden lg:block lg:sidebar-expanded:hidden 2xl:hidden text-center w-6"
             aria-hidden="true">•••</span>
-          <span class="lg:hidden lg:sidebar-expanded:block 2xl:block">Adriana Pezo - Backend</span>
+          <span class="lg:hidden lg:sidebar-expanded:block 2xl:block">Baigorrea - Backend</span>
         </h3>
         <ul class="mt-3">
 
