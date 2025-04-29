@@ -376,7 +376,7 @@
         <section class="px-[5%] pt-10 lg:pt-20 bg-white" id="villallegada">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10" >
                 <div class="flex flex-col lg:order-2 justify-center">
-                    <img class="w-full h-[300px] sm:h-[400px] lg:h-[500px] 2xl:h-[600px] object-contain object-center" src="{{ asset('images/img/terreno.png') }}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
+                    <img class="w-full h-[300px] sm:h-[400px] lg:h-[500px] 2xl:h-[600px] object-contain object-center" src="{{ asset('images/img/imagendemo.png') }}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
                 </div>
                 <div class="flex flex-col gap-5 justify-center">
 
