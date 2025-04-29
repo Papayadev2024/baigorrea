@@ -312,10 +312,10 @@
 
                     <h2 id="animated-second-text" class="text-[#013250] text-left font-tt_hoves_bold uppercase text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl !leading-tight tracking-wide">
                         <span class="word">Vive</span>
-                        <span class="word">frente</span>
-                        <span class="word">al</span>
-                        <span class="word">mar</span><br>
-                        <span class="word">en</span>      
+                        <span class="word">a 10 minutos</span>
+                        <span class="word">de</span>
+                        <span class="word">la</span><br>
+                        <span class="word">Bahía de</span>      
                         <span class="word text-[#EB6C2D]">Paracas</span>
                     </h2>
                     
@@ -323,27 +323,25 @@
                         <div class="grid grid-cols-2 rounded-2xl  border border-[#013250] w-auto">
                             <div class="flex flex-col border-r border-[#013250] px-4 py-2">
                                 <p class="font-aceh text-[#014568] text-lg">Desde</p>
-                                <h2 class="font-aceh font-bold text-[#013250] text-2xl">S/10,000</h2>
+                                <h2 class="font-aceh font-bold text-[#013250] text-2xl">S/12,948</h2>
                             </div>
                             
                             <div class="flex flex-col px-4 py-2">
                                 <p class="font-aceh  text-[#014568] text-lg">Cuotas desde</p>
-                                <h2 class="font-aceh font-bold text-[#013250] text-2xl leading-5 sm:!leading-normal">S/360 <span class="text-[#014568] font-normal text-lg">mensuales</span></h2>
+                                <h2 class="font-aceh font-bold text-[#013250] text-2xl leading-5 sm:!leading-normal">S/279 <span class="text-[#014568] font-normal text-lg">mensuales</span></h2>
                             </div>
                         </div>
                     </div>
 
                     <p class="font-aceh text-[#014568] text-lg 2xl:text-xl precios1derecha">
-                        Despierta con la brisa marina y el sol radiante todo el año. 
-                        Nuestro proyecto en Paracas te ofrece la tranquilidad de la naturaleza 
-                        con el confort de una inversión segura.
+                        Disfruta del sol radiante todo el año. Estamos ubicados en la misma avenida Panamericana Sur, kilómetro 232, y a tan solo 10 minutos de la bahía de Paracas y de la urbanización Santa Cruz.
                     </p>
 
                     <ul class="font-aceh text-[#014568] text-lg 2xl:text-xl precios1derecha">
-                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> A minutos de la reserva natural</li>
+                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> A 10 minutos de la reserva natural</li>
                         <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Alto potencial de revalorización</li>
-                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Clima cálido todo el año</li>
-                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Financiamiento sin bancos</li>
+                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Ubicados en la misma Avenida Panamericana Sur Km.232</li>
+                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Crédito directo sin intereses</li>
                     </ul>
 
                     <div id="masinfoparacas" class="precios1derecha text-white hidden cursor-pointer lg:flex text-center text-lg px-6 py-3 font-aceh rounded-xl bg-gradient-to-r from-[#004469] to-[#61C0E0] flex-row gap-2 justify-center">
@@ -381,39 +379,36 @@
                 <div class="flex flex-col gap-5 justify-center">
 
                     <h2 id="animated-third-text" class="text-[#013250] text-left font-tt_hoves_bold uppercase text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl !leading-tight tracking-wide">
-                        <span class="word">Escápate</span>
-                        <span class="word">a</span>
-                        <span class="word">tu</span>
-                        <span class="word">Refugio</span><br>
-                        <span class="word">en</span>
-                        <span class="word text-[#EB6C2D]">villa vista</span>
+                        <span class="word">Construye</span>
+                        <span class="word">la</span>
+                        <span class="word">casa</span>
+                        <span class="word">de tus sueños en</span><br>
+                        <span class="word text-[#EB6C2D]">Villa Buenavista</span>
                     </h2>
                     
                     <div class="flex precios2izquierda">
                         <div class="grid grid-cols-2 rounded-2xl  border border-[#013250] w-auto">
                             <div class="flex flex-col border-r border-[#013250] px-4 py-2">
-                                <p class="font-aceh text-[#014568] text-lg">Desde</p>
-                                <h2 class="font-aceh font-bold text-[#013250] text-2xl">S/10,000</h2>
+                                <p class="font-aceh text-[#014568] text-lg">Inicial</p>
+                                <h2 class="font-aceh font-bold text-[#013250] text-2xl">S/1,480</h2>
                             </div>
                             
                             <div class="flex flex-col px-4 py-2">
                                 <p class="font-aceh  text-[#014568] text-lg">Cuotas desde</p>
-                                <h2 class="font-aceh font-bold text-[#013250] text-2xl leading-5 sm:!leading-normal">S/360 <span class="text-[#014568] font-normal text-lg">mensuales</span></h2>
+                                <h2 class="font-aceh font-bold text-[#013250] text-2xl leading-5 sm:!leading-normal">S/279 <span class="text-[#014568] font-normal text-lg">mensuales</span></h2>
                             </div>
                         </div>
                     </div>
 
                     <p class="font-aceh text-[#014568] text-lg 2xl:text-xl precios2izquierda">
-                        Tu lugar ideal para disfrutar del verano y el descanso. 
-                        Este proyecto te da acceso exclusivo a un club privado y 
-                        espacios diseñados para el confort.
+                        En Villa Buenavista, tú eres propietario de un terreno con 100% de seguridad legal. Tu contrato es firmado y legalizado notarialmente. Además, contamos con título de propiedad y servicios básicos.
                     </p>
 
                     <ul class="font-aceh text-[#014568] text-lg 2xl:text-xl precios2izquierda">
-                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Ubicación privilegiada cerca del mar</li>
-                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Financiamiento sin bancos</li>
-                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Seguridad 24/7 y áreas recreativas</li>
-                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Opción de financiamiento directo</li>
+                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Ubicación con amplias áreas verdes</li>
+                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Bono de descuento por buen pagador</li>
+                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Hasta 48 cuotas sin intereses</li>
+                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Crédito directo, sin bancos.</li>
                     </ul>
 
                     <div id="masinfovilla" class="precios2izquierda text-white cursor-pointer hidden lg:flex text-center text-lg px-6 py-3 font-aceh rounded-xl bg-gradient-to-r from-[#004469] to-[#61C0E0]  flex-row gap-2 justify-center">
@@ -451,21 +446,21 @@
                 <div class="flex flex-col gap-5 justify-center">
 
                     <h2 id="animated-four-text" class="text-[#013250] text-left font-tt_hoves_bold uppercase text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl !leading-tight tracking-wide">
-                        <span class="word">Naturaleza</span>
-                        <span class="word">y</span>
-                        <span class="word">Conectividad</span>
-                        <br><span class="word text-[#EB6C2D]">en Cañete</span></h2>
+                        <span class="word">Disfruta de tu</span>
+                        <span class="word">Terreno en Pisco y obtén</span>
+                        <span class="word">alta revalorización</span>
+                        <br><span class="word text-[#EB6C2D]">por tu inversión</span></h2>
                     
                     <div class="flex precios3derecha">
                         <div class="grid grid-cols-2 rounded-2xl  border border-[#013250] w-auto">
                             <div class="flex flex-col border-r border-[#013250] px-4 py-2">
-                                <p class="font-aceh text-[#014568] text-lg">Desde</p>
-                                <h2 class="font-aceh font-bold text-[#013250] text-2xl">S/10,000</h2>
+                                <p class="font-aceh text-[#014568] text-lg">Inicial</p>
+                                <h2 class="font-aceh font-bold text-[#013250] text-2xl">S/2,000</h2>
                             </div>
                             
                             <div class="flex flex-col px-4 py-2">
                                 <p class="font-aceh  text-[#014568] text-lg">Cuotas desde</p>
-                                <h2 class="font-aceh font-bold text-[#013250] text-2xl leading-5 sm:!leading-normal">S/360 <span class="text-[#014568] font-normal text-lg">mensuales</span></h2>
+                                <h2 class="font-aceh font-bold text-[#013250] text-2xl leading-5 sm:!leading-normal">S/373 <span class="text-[#014568] font-normal text-lg">mensuales</span></h2>
                             </div>
                         </div>
                     </div>
@@ -477,9 +472,9 @@
                     </p>
 
                     <ul class="font-aceh text-[#014568] text-lg 2xl:text-xl precios3derecha">
-                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Gran conectividad con la ciudad</li>
+                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Tu inversión dentro del casco urbano</li>
                         <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Seguridad y tranquilidad aseguradas</li>
-                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Espacios diseñados para el bienestar</li>
+                        <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> A 10 minutos del Mega Plaza Pisco y de Plaza Vea</li>
                         <li class="flex flex-row items-center gap-2"><i class="fa-solid fa-square-check text-[#00BE00] text-[22px]"></i> Financiamiento sin bancos</li>
                     </ul>
 
