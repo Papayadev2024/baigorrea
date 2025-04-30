@@ -79,7 +79,6 @@
             opacity: 0;
         }
 
-      
     </style>
 @stop
 @section('content')
@@ -88,7 +87,18 @@
         
         {{-- style="background-image: url('{{ asset('images/img/bannerfinal.png') }}')" --}}
         <section id="bannerprincipal" class="bg-cover relative" >
-            <iframe class="w-full h-full absolute" src="https://www.youtube.com/embed/jJVrDArViZE?autoplay=1&mute=1&enablejsapi=1&loop=1&controls=0&disablekb=1&fs=0&modestbranding=1&rel=0&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            {{-- <iframe 
+                class="absolute top-0 left-0 w-full h-full object-cover"
+                src="https://www.youtube.com/embed/jJVrDArViZE?autoplay=1&mute=1&enablejsapi=1&loop=1&controls=0&disablekb=1&fs=0&modestbranding=1&rel=0&showinfo=0&playlist=jJVrDArViZE" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe> --}}
+            <div class="absolute top-0 left-0 w-full h-full object-cover">
+                <video loop muted autoplay class="w-full h-full object-cover">
+                    <source src="{{asset('video/videobaigorrea.mp4')}}" type="video/mp4">
+                </video>
+            </div>
             <div class="absolute inset-0 bg-[#0057B8] bg-opacity-80"></div>
             <div class="flex flex-col gap-10 w-full pr-[5%] sm:px-[5%] bg-[#0057B8] bg-opacity-80">
                 
