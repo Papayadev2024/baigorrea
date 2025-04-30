@@ -118,10 +118,10 @@
                                 <span class="word text-[#E1DE18]">bolsillo</span>
                             </h2>
                         </div>
-                       
-                        <div class="flex flex-col justify-end items-start relative order-2 lg:order-1">
+                        {{-- -mb-7 --}}
+                        <div class="flex flex-col justify-end items-center relative order-2 lg:order-1">
                             <div class="relative mx-auto lg:mx-0" data-aos="fade-down">
-                                <img class="imagenportada w-full h-[300px] sm:h-[400px] xl:h-[500px] 2xl:h-[600px]  -mb-7 z-10 object-cover sm:object-contain object-right sm:object-center" src="{{asset('images/img/imagenportada.png')}}"
+                                <img class="imagenportada w-full h-[300px] sm:h-[400px] xl:h-[500px] 2xl:h-[600px]   z-10 object-cover sm:object-contain object-right sm:object-center" src="{{asset('images/img/familia.png')}}"
                                     onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
                             </div>
                         </div>
