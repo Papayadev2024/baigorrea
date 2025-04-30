@@ -95,7 +95,7 @@
                 allowfullscreen>
             </iframe> --}}
             <div class="absolute top-0 left-0 w-full h-full object-cover">
-                <video loop muted autoplay class="w-full h-full object-cover">
+                <video loop autoplay class="w-full h-full object-cover">
                     <source src="{{asset('video/videobaigorrea.mp4')}}" type="video/mp4">
                 </video>
             </div>
@@ -121,7 +121,7 @@
                         {{-- -mb-7 --}}
                         <div class="flex flex-col justify-end items-center relative order-2 lg:order-1">
                             <div class="relative mx-auto lg:mx-0" data-aos="fade-down">
-                                <img class="imagenportada w-full h-[300px] sm:h-[400px] xl:h-[500px] 2xl:h-[600px]   z-10 object-cover sm:object-contain object-right sm:object-center" src="{{asset('images/img/familia.png')}}"
+                                <img class="imagenportada w-full h-[250px] sm:h-[400px] xl:h-[500px] 2xl:h-[600px]   z-10 object-cover sm:object-contain object-right sm:object-center" src="{{asset('images/img/familia.png')}}"
                                     onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
                             </div>
                         </div>
@@ -316,7 +316,7 @@
         <section class="px-[5%] pt-10 lg:pt-20 bg-white" id="paracasllegada">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10" >
                 <div class="flex flex-col justify-center">
-                    <img class="w-full h-[300px] sm:h-[400px] lg:h-[500px] 2xl:h-[600px] object-contain object-center" src="{{ asset('images/img/terreno.png') }}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
+                    <img class="w-full h-full sm:h-[400px] lg:h-[500px] 2xl:h-[600px] object-contain object-center" src="{{ asset('images/img/bannerprueba.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
                 </div>
                 <div class="flex flex-col gap-5 justify-center">
 
@@ -520,12 +520,12 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-10 pb-10 lg:pb-0" >
                 <div class="lg:col-span-7 flex flex-col justify-start pt-10 pb-4 lg:py-10 gap-3 lg:gap-8">
                     <h2 class="text-white text-left font-tt_hoves_bold uppercase text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl !leading-tight tracking-wide" data-aos="fade-down">
-                        <span class="text-[#E0DE1D]">Historias</span> de quienes ya eligieron su terreno en Cañete
+                        <span class="text-[#E0DE1D]">Historias</span> de quienes ya eligieron su terreno en Pisco
                     </h2>
                     <div>
                         <div class="swiper testimonios flex flex-row w-full">
                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
+                                {{-- <div class="swiper-slide">
                                     <div class="grid grid-cols-1 2xl:max-w-2xl">
                                         <div class="flex flex-col justify-center items-center">
                                           <div class="w-full h-[380px] rounded-xl overflow-hidden relative bg-cover bg-center" style="background-image: url('https://i.ytimg.com/vi/ywwtO7MZUzk/hq720.jpg');">
@@ -536,7 +536,7 @@
                                           </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div class="swiper-slide">
                                     <div class="grid grid-cols-1 2xl:max-w-2xl">
                                         <div class="flex flex-col justify-center items-center">
