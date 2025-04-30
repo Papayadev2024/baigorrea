@@ -95,7 +95,7 @@
                 allowfullscreen>
             </iframe> --}}
             <div class="absolute top-0 left-0 w-full h-full object-cover">
-                <video autoplay muted loop  class="w-full h-full object-cover">
+                <video autoplay class="w-full h-full object-cover">
                     <source src="{{asset('video/videobaigorrea.mp4')}}" type="video/mp4">
                 </video>
             </div>
@@ -528,7 +528,7 @@
                                 <div class="swiper-slide">
                                     <div class="grid grid-cols-1 2xl:max-w-2xl">
                                         <div class="flex flex-col justify-center items-center">
-                                          <div class="w-full h-[380px] rounded-xl overflow-hidden relative bg-cover bg-center" style="background-image: url('https://i.ytimg.com/vi/6V8qnZWqFFc/hq720.jpg');">
+                                          <div class="w-full h-[380px] rounded-xl overflow-hidden relative bg-cover bg-center" style="background-image: url('{{ asset('images/img/print.png') }}');">
                                             <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo(this)">
                                               <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/img/iconof.png') }}" /></button>
                                             </div>

@@ -22,7 +22,7 @@
 
         <div class="lg:col-span-2 flex flex-col text-white text-base justify-start items-start gap-5">
             <img class="h-20 object-contain" src="{{ asset('images/svg/logoblancobaigorrea.svg') }}" />
-            <p class="font-aceh text-lg leading-none">Hacemos que la inversión en casa de tus sueños se haga realidad!</p>
+            <p class="font-aceh text-lg leading-none">Hacemos que tu inversión en la casa de tus sueños se haga realidad!!</p>
             <div class="mt-3">
                 <a id="iraform" class="hidden cursor-pointer lg:flex flex-row items-center gap-2 text-sm font-aceh !text-lg font-medium bg-[linear-gradient(90deg,#004469_-46.4%,#61C0E0_109.31%)] px-3 md:px-6 py-3.5 rounded-xl">
                     Enviar formulario
@@ -55,7 +55,7 @@
         <div class="flex flex-col text-lg font-aceh text-white gap-2">
             <h3 class="text-xl text-white font-aceh font-semibold tracking-wide pb-3">Enlaces Rápidos</h3>
             <a class="cursor-pointer" id="paracaspr2">Proyecto Villa Buenavista</a>
-            <a class="cursor-pointer" id="villavistapr2">Proyecto Grabadal (Próximamente)</a>
+            <a class="cursor-pointer" id="villavistapr2">Proyecto Gramadal (Próximamente)</a>
             <a class="cursor-pointer" id="cenetepr2">Proyecto Cañete (Próximamente)</a>
         </div>
 
