@@ -95,7 +95,7 @@
                 allowfullscreen>
             </iframe> --}}
             <div class="absolute top-0 left-0 w-full h-full object-cover">
-                <video autoplay loop  class="w-full h-full object-cover">
+                <video autoplay muted loop  class="w-full h-full object-cover">
                     <source src="{{asset('video/videobaigorrea.mp4')}}" type="video/mp4">
                 </video>
             </div>
@@ -316,7 +316,7 @@
         <section class="px-[5%] pt-10 lg:pt-20 bg-white" id="paracasllegada">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10" >
                 <div class="flex flex-col justify-center">
-                    <img class="w-full h-full sm:h-[400px] lg:h-[500px] 2xl:h-[600px] object-contain object-center" src="{{ asset('images/img/bannerprueba.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
+                    <img class="w-full h-[400px] lg:h-[500px] xl:h-[650px] 2xl:h-[700px] object-contain object-center" src="{{ asset('images/img/bannerprueba.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
                 </div>
                 <div class="flex flex-col gap-5 justify-center">
 
@@ -525,18 +525,18 @@
                     <div>
                         <div class="swiper testimonios flex flex-row w-full">
                            <div class="swiper-wrapper">
-                                {{-- <div class="swiper-slide">
+                                <div class="swiper-slide">
                                     <div class="grid grid-cols-1 2xl:max-w-2xl">
                                         <div class="flex flex-col justify-center items-center">
                                           <div class="w-full h-[380px] rounded-xl overflow-hidden relative bg-cover bg-center" style="background-image: url('https://i.ytimg.com/vi/ywwtO7MZUzk/hq720.jpg');">
                                             <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo(this)">
                                               <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/img/iconof.png') }}" /></button>
                                             </div>
-                                            <iframe id="videoIframe" class="videoIframe w-full h-full hidden" src="https://www.youtube.com/embed/ywwtO7MZUzk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <iframe id="videoIframe" class="videoIframe w-full h-full hidden" src="https://www.youtube.com/embed/RM-XqruQ5zQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                           </div>
                                         </div>
                                     </div>
-                                </div> --}}
+                                </div>
                                 <div class="swiper-slide">
                                     <div class="grid grid-cols-1 2xl:max-w-2xl">
                                         <div class="flex flex-col justify-center items-center">
