@@ -95,7 +95,7 @@
                 allowfullscreen>
             </iframe> --}}
             <div class="absolute top-0 left-0 w-full h-full object-cover">
-                <video autoplay class="w-full h-full object-cover">
+                <video autoplay muted loop class="w-full h-full object-cover">
                     <source src="{{asset('video/videobaigorrea.mp4')}}" type="video/mp4">
                 </video>
             </div>
@@ -271,9 +271,9 @@
                                         <img  class="object-contain w-12" loading="lazy" src="{{asset('images/img/energy.png')}}" onerror="this.onerror=null;this.src='{{ asset('images/imagen/noimagen.jpg') }}';"/>
                                     </div>
                                     <div class="flex flex-col text-white">
-                                        <h2 class="uppercase text-xl xl:text-2xl font-tt_hoves_bold !leading-none max-w-xs">obras completas</h2>
+                                        <h2 class="uppercase text-xl xl:text-2xl font-tt_hoves_bold !leading-none max-w-xs">ALTA RENTABILIDAD</h2>
                                         <p class="mt-2 text-lg xl:text-xl font-aceh !leading-tight">
-                                            Contamos con todas las obras completas, amplias pistas asfaltadas, veredas, luz, agua y desagüe.
+                                            Nuestro proyecto contará con un desarrollo urbano moderno, amplias áreas verdes y una excelente plusvalía por tu inversión.
                                         </p>
                                     </div>
                                 </div>
