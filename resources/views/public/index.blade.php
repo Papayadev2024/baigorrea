@@ -102,7 +102,7 @@
             <div class="absolute inset-0 bg-[#0057B8] bg-opacity-80"></div>
             <div class="flex flex-col gap-10 w-full pr-[5%] sm:px-[5%] bg-[#0057B8] bg-opacity-80">
                 
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+                <div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-5">
                     
                     <div class="lg:col-span-2 flex flex-col sm:-space-y-10 pt-10 md:pt-16">
                         <div class="flex flex-col justify-center items-start gap-8 px-[5%] sm:px-0">
