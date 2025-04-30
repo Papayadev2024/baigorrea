@@ -54,9 +54,9 @@
 
         <div class="flex flex-col text-lg font-aceh text-white gap-2">
             <h3 class="text-xl text-white font-aceh font-semibold tracking-wide pb-3">Enlaces Rápidos</h3>
-            <a class="cursor-pointer" id="paracaspr2">Proyecto Villa Buena Vista</a>
-            <a class="cursor-pointer" id="villavistapr2">Proyecto Villa Vista</a>
-            <a class="cursor-pointer" id="cenetepr2">Proyecto Cañete</a>
+            <a class="cursor-pointer" id="paracaspr2">Proyecto Villa Buenavista</a>
+            <a class="cursor-pointer" id="villavistapr2">Proyecto Grabadal (Próximamente)</a>
+            <a class="cursor-pointer" id="cenetepr2">Proyecto Cañete (Próximamente)</a>
         </div>
 
         <div class="flex flex-col text-lg font-aceh text-white gap-2">
