@@ -95,7 +95,7 @@
                 allowfullscreen>
             </iframe> --}}
             <div class="absolute top-0 left-0 w-full h-full object-cover">
-                <video loop autoplay class="w-full h-full object-cover">
+                <video autoplay loop  class="w-full h-full object-cover">
                     <source src="{{asset('video/videobaigorrea.mp4')}}" type="video/mp4">
                 </video>
             </div>
