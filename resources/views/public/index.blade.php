@@ -384,7 +384,7 @@
         <section class="px-[5%] pt-10 lg:pt-20 bg-white" id="villallegada">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10" >
                 <div class="flex flex-col lg:order-2 justify-center">
-                    <img class="w-full h-[300px] sm:h-[400px] lg:h-[500px] 2xl:h-[600px] object-contain object-center" src="{{ asset('images/img/imagendemo.png') }}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
+                    <img class="w-full h-[400px] lg:h-[500px] xl:h-[650px] 2xl:h-[700px] object-contain object-center" src="{{ asset('images/img/banner2.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
                 </div>
                 <div class="flex flex-col gap-5 justify-center">
 
@@ -451,7 +451,7 @@
         <section class="px-[5%] py-10 lg:py-20 bg-white" id="canetellegada">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10" >
                 <div class="flex flex-col justify-center">
-                    <img class="w-full h-[300px] sm:h-[400px] lg:h-[500px] 2xl:h-[600px] object-contain object-center" src="{{ asset('images/img/terreno.png') }}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
+                    <img class="w-full h-[400px] lg:h-[500px] xl:h-[650px] 2xl:h-[700px] object-contain object-center" src="{{ asset('images/img/banner3.jpg') }}" onerror="this.onerror=null;this.src='{{ asset('images/img/noimagen.jpg') }}';" />
                 </div>
                 <div class="flex flex-col gap-5 justify-center">
 
@@ -528,7 +528,7 @@
                                 <div class="swiper-slide">
                                     <div class="grid grid-cols-1 2xl:max-w-2xl">
                                         <div class="flex flex-col justify-center items-center">
-                                          <div class="w-full h-[380px] rounded-xl overflow-hidden relative bg-cover bg-center" style="background-image: url('https://i.ytimg.com/vi/ywwtO7MZUzk/hq720.jpg');">
+                                          <div class="w-full h-[380px] rounded-xl overflow-hidden relative bg-cover bg-center" style="background-image: url('https://i.ytimg.com/vi/6V8qnZWqFFc/hq720.jpg');">
                                             <div class="absolute inset-0 flex items-center justify-center disparo bg-opacity-50 cursor-pointer" onclick="showVideo(this)">
                                               <button class="text-white text-2xl"><img class="w-16 hover:animate-jump hover:animate-once hover:animate-duration-1000" src="{{ asset('images/img/iconof.png') }}" /></button>
                                             </div>
