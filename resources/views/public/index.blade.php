@@ -88,7 +88,7 @@
         
         {{-- style="background-image: url('{{ asset('images/img/bannerfinal.png') }}')" --}}
         <section id="bannerprincipal" class="bg-cover relative" >
-            <iframe class="w-full h-full absolute" src="https://www.youtube.com/embed/5GvpNRNPJbs?autoplay=1&mute=1&enablejsapi=1&loop=1&controls=0&disablekb=1&fs=0&modestbranding=1&rel=0&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="w-full h-full absolute" src="https://www.youtube.com/embed/jJVrDArViZE?autoplay=1&mute=1&enablejsapi=1&loop=1&controls=0&disablekb=1&fs=0&modestbranding=1&rel=0&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div class="absolute inset-0 bg-[#0057B8] bg-opacity-80"></div>
             <div class="flex flex-col gap-10 w-full pr-[5%] sm:px-[5%] bg-[#0057B8] bg-opacity-80">
                 
@@ -314,7 +314,7 @@
                         <span class="word">Vive</span>
                         <span class="word">a 10 minutos</span>
                         <span class="word">de</span>
-                        <span class="word">la</span><br>
+                        <span class="word">la</span>
                         <span class="word">Bahía de</span>      
                         <span class="word text-[#EB6C2D]">Paracas</span>
                     </h2>
@@ -382,7 +382,7 @@
                         <span class="word">Construye</span>
                         <span class="word">la</span>
                         <span class="word">casa</span>
-                        <span class="word">de tus sueños en</span><br>
+                        <span class="word">de tus sueños en</span>
                         <span class="word text-[#EB6C2D]">Villa Buenavista</span>
                     </h2>
                     
@@ -448,7 +448,7 @@
                     <h2 id="animated-four-text" class="text-[#013250] text-left font-tt_hoves_bold uppercase text-3xl sm:text-4xl xl:text-5xl 2xl:text-6xl !leading-tight tracking-wide">
                         <span class="word">Disfruta de tu</span>
                         <span class="word">Terreno en Pisco y obtén</span>
-                        <span class="word">alta revalorización</span>
+                        <span class="word">una alta revalorización</span>
                         <br><span class="word text-[#EB6C2D]">por tu inversión</span></h2>
                     
                     <div class="flex precios3derecha">
